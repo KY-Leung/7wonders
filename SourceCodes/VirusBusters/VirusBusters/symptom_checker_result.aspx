@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="symptom_checker.aspx.cs" Inherits="VirusBusters.symptom_checker" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="symptom_checker_result.aspx.cs" Inherits="VirusBusters.symptom_checker_result" %>
 
 <!DOCTYPE html>
 
@@ -8,7 +8,7 @@
 
     <head>
         <meta charset="utf-8" />
-        <title>Symptom Checker</title>
+        <title>Possible Conditions</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta content="" name="description" />
@@ -21,7 +21,6 @@
         <link href="../public/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css" />
         <!-- END GLOBAL MANDATORY STYLES -->
         <!-- BEGIN PAGE LEVEL PLUGINS -->
-        <link href="../public/assets/global/plugins/jquery-multi-select/css/multi-select.css" rel="stylesheet" type="text/css" />
         <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN THEME GLOBAL STYLES -->
         <link href="../public/assets/global/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
@@ -381,69 +380,34 @@
                 <!-- BEGIN CONTENT BODY -->
                 <div class="page-content">
                     <div class="m-heading-1 border-green m-bordered">
-                        <h3>Instructions</h3>
-                        <p>--- Some instructions here ---</p>
+                        <h3>Matches for Possible Conditions</h3>
+                        <p>Based on the symptoms you entered, we have calculated matches for possible conditions. The conditions are listed in order of how closely your symptoms match those conditions. This information is meant to be informational, and is not intended as medical advice or a diagnosis. Information you read should not replace the advice of your healthcare provider. You should always seek the advice of a qualified healthcare provider about any questions you may have about a medical condition. As always, if you think you have a medical emergency you should call your doctor or dial "995" immediately.</p>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
-                            <!-- BEGIN VALIDATION STATES-->
-                            <div class="portlet light portlet-fit portlet-form bordered">
+                            <!-- BEGIN CHART PORTLET-->
+                            <div class="portlet light bordered">
                                 <div class="portlet-title">
                                     <div class="caption">
-                                        <i class="icon-settings font-dark"></i>
-                                        <span class="caption-subject font-dark sbold uppercase">Choose Symptom(s)</span>
+                                        <i class="icon-bar-chart font-green-haze"></i>
+                                        <span class="caption-subject bold uppercase font-green-haze"> Possible Conditions</span>
+                                    </div>
+                                    <div class="tools">
+                                        <a href="javascript:;" class="collapse"> </a>
+                                        <a href="#portlet-config" data-toggle="modal" class="config"> </a>
+                                        <a href="javascript:;" class="reload"> </a>
+                                        <a href="javascript:;" class="fullscreen"> </a>
+                                        <a href="javascript:;" class="remove"> </a>
                                     </div>
                                 </div>
                                 <div class="portlet-body">
-                                    <!-- BEGIN FORM-->
-                                    <form action="#" id="form_sample_3" class="form-horizontal">
-                                        <div class="form-body">
-                                            <div class="form-group">
-                                                <label class="control-label col-md-3">Grouped Options</label>
-                                                <div class="col-md-9">
-                                                    <select multiple="multiple" class="multi-select" id="my_multi_select2" name="my_multi_select2[]">
-                                                        <optgroup label="NFC EAST">
-                                                            <option>Dallas Cowboys</option>
-                                                            <option>New York Giants</option>
-                                                            <option>Philadelphia Eagles</option>
-                                                            <option>Washington Redskins</option>
-                                                        </optgroup>
-                                                        <optgroup label="NFC NORTH">
-                                                            <option>Chicago Bears</option>
-                                                            <option>Detroit Lions</option>
-                                                            <option>Green Bay Packers</option>
-                                                            <option>Minnesota Vikings</option>
-                                                        </optgroup>
-                                                        <optgroup label="NFC SOUTH">
-                                                            <option>Atlanta Falcons</option>
-                                                            <option>Carolina Panthers</option>
-                                                            <option>New Orleans Saints</option>
-                                                            <option>Tampa Bay Buccaneers</option>
-                                                        </optgroup>
-                                                        <optgroup label="NFC WEST">
-                                                            <option>Arizona Cardinals</option>
-                                                            <option>St. Louis Rams</option>
-                                                            <option>San Francisco 49ers</option>
-                                                            <option>Seattle Seahawks</option>
-                                                        </optgroup>
-                                                    </select>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="form-actions">
-                                            <div class="row">
-                                                <div class="col-md-offset-3 col-md-9">
-                                                    <button type="submit" class="btn green">
-                                                        <i class="fa fa-check"></i> Diagnose</button>
-                                                    <button type="button" class="btn grey-salsa btn-outline">Clear</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                    <!-- END FORM-->
+                                    <div id="chart_6" class="chart" style="height: 525px;"> </div>
                                 </div>
-                                <!-- END VALIDATION STATES-->
+                                <a href="javascript:;" class="btn default button-previous">
+                                    <i class="fa fa-angle-left"></i> Back to Choose Symptom(s)
+                                </a>
                             </div>
+                            <!-- END CHART PORTLET-->
                         </div>
                     </div>
                 </div>
@@ -1065,14 +1029,16 @@
         <script src="../public/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
         <!-- END CORE PLUGINS -->
         <!-- BEGIN PAGE LEVEL PLUGINS -->
-        <script src="../public/assets/global/plugins/jquery-multi-select/js/jquery.multi-select.js" type="text/javascript"></script>
-        <script src="../public/assets/global/plugins/select2/js/select2.full.min.js" type="text/javascript"></script>
+        <script src="../public/assets/global/plugins/amcharts/amcharts/amcharts.js" type="text/javascript"></script>
+        <script src="../public/assets/global/plugins/amcharts/amcharts/serial.js" type="text/javascript"></script>
+        <script src="../public/assets/global/plugins/amcharts/amcharts/pie.js" type="text/javascript"></script>
+        <script src="../public/assets/global/plugins/amcharts/amcharts/themes/light.js" type="text/javascript"></script>
         <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN THEME GLOBAL SCRIPTS -->
         <script src="../public/assets/global/js/app.min.js" type="text/javascript"></script>
         <!-- END THEME GLOBAL SCRIPTS -->
         <!-- BEGIN PAGE LEVEL SCRIPTS -->
-        <script src="../public/assets/pages/js/components-multi-select.min.js" type="text/javascript"></script>
+        <script src="../public/assets/pages/js/charts-amcharts.min.js" type="text/javascript"></script>
         <!-- END PAGE LEVEL SCRIPTS -->
         <!-- BEGIN THEME LAYOUT SCRIPTS -->
         <script src="../public/assets/themes/js/layout.min.js" type="text/javascript"></script>
