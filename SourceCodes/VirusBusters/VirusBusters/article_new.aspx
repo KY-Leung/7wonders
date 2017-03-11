@@ -23,6 +23,7 @@
         <!-- BEGIN PAGE LEVEL PLUGINS -->
         <link href="../public/assets/global/plugins/bootstrap-markdown/css/bootstrap-markdown.min.css" rel="stylesheet" type="text/css" />
         <link href="../public/assets/global/plugins/bootstrap-tagsinput/bootstrap-tagsinput.css" rel="stylesheet" type="text/css" />
+        <link href="../public/assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.css" rel="stylesheet" type="text/css" />
         <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN THEME GLOBAL STYLES -->
         <link href="../public/assets/global/css/components.min.css" rel="stylesheet" id="style_components" type="text/css" />
@@ -414,7 +415,24 @@
                                         <div class="form-group">
                                             <label class="control-label col-md-3">Tags</label>
                                             <div class="col-md-9">
-                                            <input type="text" value="Amsterdam,Washington,Sydney,Beijing,Cairo" data-role="tagsinput"> </div>
+                                            <input type="text" value="Singapore,Lung Cancer,SGH,Male" data-role="tagsinput"> </div>
+                                        </div>
+                                        <div class="form-group last">
+                                            <label class="control-label col-md-3">Image Upload</label>
+                                            <div class="col-md-9">
+                                                <div class="fileinput fileinput-new" data-provides="fileinput">
+                                                    <div class="fileinput-new thumbnail" style="width: 200px; height: 150px;">
+                                                        <img src="http://www.placehold.it/200x150/EFEFEF/AAAAAA&amp;text=no+image" alt="" /> </div>
+                                                    <div class="fileinput-preview fileinput-exists thumbnail" style="max-width: 200px; max-height: 150px;"> </div>
+                                                    <div>
+                                                        <span class="btn default btn-file">
+                                                            <span class="fileinput-new"> Select image </span>
+                                                            <span class="fileinput-exists"> Change </span>
+                                                            <input type="file" name="..."> </span>
+                                                        <a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput"> Remove </a>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </div>
                                         <div class="form-actions">
                                             <div class="row">
@@ -1051,6 +1069,7 @@
         <!-- BEGIN PAGE LEVEL PLUGINS -->
         <script src="../public/assets/global/plugins/bootstrap-markdown/js/bootstrap-markdown.js" type="text/javascript"></script>
         <script src="../public/assets/global/plugins/bootstrap-tagsinput/bootstrap-tagsinput.min.js" type="text/javascript"></script>
+        <script src="../public/assets/global/plugins/bootstrap-fileinput/bootstrap-fileinput.js" type="text/javascript"></script>
         <!-- END PAGE LEVEL PLUGINS -->
         <!-- BEGIN THEME GLOBAL SCRIPTS -->
         <script src="../public/assets/global/js/app.min.js" type="text/javascript"></script>
