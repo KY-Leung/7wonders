@@ -16,7 +16,7 @@ using System.Data;
 
 namespace VirusBusters
 {
-    public partial class articles : System.Web.UI.Page
+    public partial class article_new : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

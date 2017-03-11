@@ -8,8 +8,9 @@
 //------------------------------------------------------------------------------
 
 namespace VirusBusters {
-    
-    
-    public partial class articles {
+
+
+    public partial class article_new
+    {
     }
 }
