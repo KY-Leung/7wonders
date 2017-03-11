@@ -412,7 +412,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label class="control-label col-md-3">Basic</label>
+                                            <label class="control-label col-md-3">Tags</label>
                                             <div class="col-md-9">
                                             <input type="text" value="Amsterdam,Washington,Sydney,Beijing,Cairo" data-role="tagsinput"> </div>
                                         </div>
