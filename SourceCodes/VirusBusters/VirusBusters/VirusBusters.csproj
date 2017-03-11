@@ -158,6 +158,7 @@
     <Content Include="Scripts\firebase-debug.js" />
     <Content Include="Scripts\firebase.js" />
     <Content Include="symptom_checker.aspx" />
+    <Content Include="symptom_checker_result.aspx" />
     <Content Include="test.aspx" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
@@ -235,6 +236,13 @@
     </Compile>
     <Compile Include="symptom_checker.aspx.designer.cs">
       <DependentUpon>symptom_checker.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="symptom_checker_result.aspx.cs">
+      <DependentUpon>symptom_checker_result.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="symptom_checker_result.aspx.designer.cs">
+      <DependentUpon>symptom_checker_result.aspx</DependentUpon>
     </Compile>
     <Compile Include="test.aspx.cs">
       <DependentUpon>test.aspx</DependentUpon>
