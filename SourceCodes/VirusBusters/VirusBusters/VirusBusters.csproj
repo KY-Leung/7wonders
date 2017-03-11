@@ -138,6 +138,8 @@
     <Content Include="appointment_history.aspx" />
     <Content Include="appointment_manage.aspx" />
     <Content Include="appointment_new.aspx" />
+    <Content Include="article_details.aspx" />
+    <Content Include="article_new.aspx" />
     <Content Include="login.aspx" />
     <Content Include="map.aspx" />
     <Content Include="packages.config" />
@@ -152,6 +154,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="articles.aspx" />
     <Content Include="Scripts\firebase-debug.js" />
     <Content Include="Scripts\firebase.js" />
     <Content Include="test.aspx" />
@@ -182,6 +185,20 @@
     <Compile Include="appointment_new.aspx.designer.cs">
       <DependentUpon>appointment_new.aspx</DependentUpon>
     </Compile>
+    <Compile Include="article_details.aspx.cs">
+      <DependentUpon>article_details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="article_details.aspx.designer.cs">
+      <DependentUpon>article_details.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="article_new.aspx.cs">
+      <DependentUpon>article_new.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="article_new.aspx.designer.cs">
+      <DependentUpon>article_new.aspx</DependentUpon>
+    </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -195,6 +212,13 @@
     </Compile>
     <Compile Include="map.aspx.designer.cs">
       <DependentUpon>map.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="articles.aspx.cs">
+      <DependentUpon>articles.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="articles.aspx.designer.cs">
+      <DependentUpon>articles.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="default.aspx.cs">
