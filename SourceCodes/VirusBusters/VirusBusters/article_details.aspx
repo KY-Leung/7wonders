@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="posts.aspx.cs" Inherits="VirusBusters.posts" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="article_details.aspx.cs" Inherits="VirusBusters.article_details" %>
 
 <!DOCTYPE html>
 
@@ -380,272 +380,208 @@
             <div class="page-content-wrapper">
                 <!-- BEGIN CONTENT BODY -->
                 <div class="page-content">
-                    <!-- BEGIN PAGE HEADER-->
-                    <!-- BEGIN PAGE BAR -->
-                    <div class="page-bar">
-                        <ul class="page-breadcrumb">
-                            <li>
-                                <a href="index.html">Home</a>
-                                <i class="fa fa-circle"></i>
-                            </li>
-                            <li>
-                                <span>General</span>
-                            </li>
-                        </ul>
-                        <div class="page-toolbar">
-                            <div class="btn-group pull-right">
-                                <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> Actions
-                                    <i class="fa fa-angle-down"></i>
-                                </button>
-                                <ul class="dropdown-menu pull-right" role="menu">
-                                    <li>
-                                        <a href="#">
-                                            <i class="icon-bell"></i> Action</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="icon-shield"></i> Another action</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="icon-user"></i> Something else here</a>
-                                    </li>
-                                    <li class="divider"> </li>
-                                    <li>
-                                        <a href="#">
-                                            <i class="icon-bag"></i> Separated link</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END PAGE BAR -->
-                    <!-- BEGIN PAGE TITLE-->
-                    <h3 class="page-title"> Blog
-                        <small>blog listing page</small>
-                    </h3>
-                    <!-- END PAGE TITLE-->
                     <!-- END PAGE HEADER-->
-                    <div class="blog-page blog-content-1">
+                    <div class="blog-page blog-content-2">
                         <div class="row">
-                            <div class="col-lg-6">
-                                <div class="blog-post-lg bordered blog-container">
-                                    <div class="blog-img-thumb">
-                                        <a href="javascript:;">
-                                            <img src="../public/assets/pages/img/page_general_search/5.jpg" />
-                                        </a>
-                                    </div>
-                                    <div class="blog-post-content">
-                                        <h2 class="blog-title blog-post-title">
-                                            <a href="javascript:;">Metronic Blog Post</a>
-                                        </h2>
-                                        <p class="blog-post-desc"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-                                            suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit </p>
-                                        <div class="blog-post-foot">
-                                            <ul class="blog-post-tags">
-                                                <li class="uppercase">
-                                                    <a href="javascript:;">Bootstrap</a>
-                                                </li>
-                                                <li class="uppercase">
-                                                    <a href="javascript:;">Sass</a>
-                                                </li>
-                                                <li class="uppercase">
-                                                    <a href="javascript:;">HTML</a>
-                                                </li>
-                                            </ul>
-                                            <div class="blog-post-meta">
-                                                <i class="icon-calendar font-blue"></i>
-                                                <a href="javascript:;">Oct 24, 2015</a>
-                                            </div>
-                                            <div class="blog-post-meta">
-                                                <i class="icon-bubble font-blue"></i>
-                                                <a href="javascript:;">14 Comments</a>
-                                            </div>
+                            <div class="col-lg-9">
+                                <div class="blog-single-content bordered blog-container">
+                                    <div class="blog-single-head">
+                                        <h1 class="blog-single-head-title">Metronic Blog Reborn</h1>
+                                        <div class="blog-single-head-date">
+                                            <i class="icon-calendar font-blue"></i>
+                                            <a href="javascript:;">Oct 24, 2015</a>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="blog-post-lg bordered blog-container">
-                                    <div class="blog-img-thumb">
-                                        <a href="javascript:;">
-                                            <img src="../public/assets/pages/img/page_general_search/05.jpg" />
-                                        </a>
+                                    <div class="blog-single-img">
+                                        <img src="../public/assets/pages/img/background/4.jpg" /> </div>
+                                    <div class="blog-single-desc">
+                                        <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore siat magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
+                                            suscipit lobortis nisl ut aliquip ex ea commodo consequat. </p>
+                                        <p> Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla et facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum
+                                            zzril delenit augue et duis dolore feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem
+                                            insitam; est usus legentis in iis qui facit eorum claritatem. </p>
+                                        <p> Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam et processus sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quame nunc putamus
+                                            parum claram, siad anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum. </p>
                                     </div>
-                                    <div class="blog-post-content">
-                                        <h2 class="blog-title blog-post-title">
-                                            <a href="javascript:;">New Metronic Features</a>
-                                        </h2>
-                                        <p class="blog-post-desc"> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper
-                                            suscipit lobortis nisl ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetuer adipiscing elit </p>
-                                        <div class="blog-post-foot">
-                                            <ul class="blog-post-tags">
-                                                <li class="uppercase">
-                                                    <a href="javascript:;">Bootstrap</a>
-                                                </li>
-                                                <li class="uppercase">
-                                                    <a href="javascript:;">Sass</a>
-                                                </li>
-                                                <li class="uppercase">
-                                                    <a href="javascript:;">HTML</a>
-                                                </li>
-                                            </ul>
-                                            <div class="blog-post-meta">
-                                                <i class="icon-calendar font-blue"></i>
-                                                <a href="javascript:;">Oct 22, 2015</a>
+                                    <div class="blog-single-foot">
+                                        <ul class="blog-post-tags">
+                                            <li class="uppercase">
+                                                <a href="javascript:;">Bootstrap</a>
+                                            </li>
+                                            <li class="uppercase">
+                                                <a href="javascript:;">Sass</a>
+                                            </li>
+                                            <li class="uppercase">
+                                                <a href="javascript:;">HTML</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="blog-comments">
+                                        <h3 class="sbold blog-comments-title">Comments(30)</h3>
+                                        <div class="c-comment-list">
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="#">
+                                                        <img class="media-object" alt="" src="../public/assets/pages/img/avatars/team1.jpg"> </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">
+                                                        <a href="#">Sean</a> on
+                                                        <span class="c-date">23 May 2015, 10:40AM</span>
+                                                    </h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. </div>
                                             </div>
-                                            <div class="blog-post-meta">
-                                                <i class="icon-bubble font-blue"></i>
-                                                <a href="javascript:;">8 Comments</a>
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="#">
+                                                        <img class="media-object" alt="" src="../public/assets/pages/img/avatars/team3.jpg"> </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">
+                                                        <a href="#">Strong Strong</a> on
+                                                        <span class="c-date">21 May 2015, 11:40AM</span>
+                                                    </h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis.
+                                                    <div class="media">
+                                                        <div class="media-left">
+                                                            <a href="#">
+                                                                <img class="media-object" alt="" src="../public/assets/pages/img/avatars/team4.jpg"> </a>
+                                                        </div>
+                                                        <div class="media-body">
+                                                            <h4 class="media-heading">
+                                                                <a href="#">Emma Stone</a> on
+                                                                <span class="c-date">30 May 2015, 9:40PM</span>
+                                                            </h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <a href="#">
+                                                        <img class="media-object" alt="" src="../public/assets/pages/img/avatars/team7.jpg"> </a>
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">
+                                                        <a href="#">Nick Nilson</a> on
+                                                        <span class="c-date">30 May 2015, 9:40PM</span>
+                                                    </h4> Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. </div>
                                             </div>
                                         </div>
+                                        <h3 class="sbold blog-comments-title">Leave A Comment</h3>
+                                        <form action="#">
+                                            <div class="form-group">
+                                                <textarea rows="8" name="message" placeholder="Write comment here ..." class="form-control c-square"></textarea>
+                                            </div>
+                                            <div class="form-group">
+                                                <button type="submit" class="btn blue uppercase btn-md sbold btn-block">Submit</button>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="blog-quote bordered blog-container">
-                                            <div class="blog-quote-label bg-green-jungle">
-                                                <i class="fa fa-quote-left"></i> Lorem ipsum dolore siat amet consectetuer adipiscing eliot sed diam nonummy nih siad euismod laoreet dolore </div>
-                                            <div class="blog-quote-avatar">
+                            <div class="col-lg-3">
+                                <div class="blog-single-sidebar bordered blog-container">
+                                    <div class="blog-single-sidebar-search">
+                                        <div class="input-icon right">
+                                            <i class="icon-magnifier"></i>
+                                            <input type="text" class="form-control" placeholder="Search Blog"> </div>
+                                    </div>
+                                    <div class="blog-single-sidebar-recent">
+                                        <h3 class="blog-sidebar-title uppercase">Recent Posts</h3>
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:;">Metronic Admin Progress</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">New UI Features</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">Lorem Ipsum Dolore Amet</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">Userfull Pages Released</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="blog-single-sidebar-tags">
+                                        <h3 class="blog-sidebar-title uppercase">Tags</h3>
+                                        <ul class="blog-post-tags">
+                                            <li class="uppercase">
+                                                <a href="javascript:;">Bootstrap</a>
+                                            </li>
+                                            <li class="uppercase">
+                                                <a href="javascript:;">Sass</a>
+                                            </li>
+                                            <li class="uppercase">
+                                                <a href="javascript:;">HTML</a>
+                                            </li>
+                                            <li class="uppercase">
+                                                <a href="javascript:;">CSS</a>
+                                            </li>
+                                            <li class="uppercase">
+                                                <a href="javascript:;">Gulp</a>
+                                            </li>
+                                            <li class="uppercase">
+                                                <a href="javascript:;">Framework</a>
+                                            </li>
+                                            <li class="uppercase">
+                                                <a href="javascript:;">Admin Theme</a>
+                                            </li>
+                                            <li class="uppercase">
+                                                <a href="javascript:;">UI Features</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="blog-single-sidebar-links">
+                                        <h3 class="blog-sidebar-title uppercase">Useful Links</h3>
+                                        <ul>
+                                            <li>
+                                                <a href="javascript:;">Lorem Ipsum </a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">Dolore Amet</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">Metronic Database</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">UI Features</a>
+                                            </li>
+                                            <li>
+                                                <a href="javascript:;">Advanced Forms</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="blog-single-sidebar-ui">
+                                        <h3 class="blog-sidebar-title uppercase">UI Examples</h3>
+                                        <div class="row ui-margin">
+                                            <div class="col-xs-4 ui-padding">
                                                 <a href="javascript:;">
-                                                    <img src="../public/assets/pages/img/avatars/team12.jpg" />
+                                                    <img src="../public/assets/pages/img/background/1.jpg" />
                                                 </a>
                                             </div>
-                                            <div class="blog-quote-author">
-                                                <h3 class="blog-title blog-quote-title">
-                                                    <a href="javascript:;">Rob Robson</a>
-                                                </h3>
-                                                <p class="blog-quote-desc">Senior Developer</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="blog-quote bordered blog-container">
-                                            <div class="blog-quote-label bg-green-jungle">
-                                                <i class="fa fa-quote-left"></i> Lorem ipsum dolore siat amet consectetuer adipiscing eliot sed diam nonummy nih siad euismod laoreet dolore </div>
-                                            <div class="blog-quote-avatar">
+                                            <div class="col-xs-4 ui-padding">
                                                 <a href="javascript:;">
-                                                    <img src="../public/assets/pages/img/avatars/team12.jpg" />
+                                                    <img src="../public/assets/pages/img/background/37.jpg" />
                                                 </a>
                                             </div>
-                                            <div class="blog-quote-author">
-                                                <h3 class="blog-title blog-quote-title">
-                                                    <a href="javascript:;">Rob Robson</a>
-                                                </h3>
-                                                <p class="blog-quote-desc">Senior Developer</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-xs-12">
-                                        <div class="blog-banner blog-container" style="background-image:url(../public/assets/pages/img/background/7.jpg);">
-                                            <h2 class="blog-title blog-banner-title">
-                                                <a href="javascript:;">Metronic Latest Features</a>
-                                            </h2>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="blog-post-sm bordered blog-container">
-                                            <div class="blog-img-thumb">
+                                            <div class="col-xs-4 ui-padding">
                                                 <a href="javascript:;">
-                                                    <img src="../public/assets/pages/img/page_general_search/1.jpg" />
+                                                    <img src="../public/assets/pages/img/background/57.jpg" />
                                                 </a>
                                             </div>
-                                            <div class="blog-post-content">
-                                                <h2 class="blog-title blog-post-title">
-                                                    <a href="javascript:;">Metronic Blog Post</a>
-                                                </h2>
-                                                <p class="blog-post-desc"> Lorem ipsum dolor sit amet adipiscing elit, sed diam nonummy </p>
-                                                <div class="blog-post-foot">
-                                                    <div class="blog-post-meta">
-                                                        <i class="icon-calendar font-blue"></i>
-                                                        <a href="javascript:;">Oct 24, 2015</a>
-                                                    </div>
-                                                    <div class="blog-post-meta">
-                                                        <i class="icon-bubble font-blue"></i>
-                                                        <a href="javascript:;">14 Comments</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="blog-post-sm bordered blog-container">
-                                            <div class="blog-img-thumb">
+                                            <div class="col-xs-4 ui-padding">
                                                 <a href="javascript:;">
-                                                    <img src="../public/assets/pages/img/page_general_search/02.jpg" />
+                                                    <img src="../public/assets/pages/img/background/53.jpg" />
                                                 </a>
                                             </div>
-                                            <div class="blog-post-content">
-                                                <h2 class="blog-title blog-post-title">
-                                                    <a href="javascript:;">Metronic Blog Post</a>
-                                                </h2>
-                                                <p class="blog-post-desc"> Lorem ipsum dolor sit amet adipiscing elit, sed diam nonummy </p>
-                                                <div class="blog-post-foot">
-                                                    <div class="blog-post-meta">
-                                                        <i class="icon-calendar font-blue"></i>
-                                                        <a href="javascript:;">Oct 24, 2015</a>
-                                                    </div>
-                                                    <div class="blog-post-meta">
-                                                        <i class="icon-bubble font-blue"></i>
-                                                        <a href="javascript:;">14 Comments</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-sm-6">
-                                        <div class="blog-post-sm bordered blog-container">
-                                            <div class="blog-img-thumb">
+                                            <div class="col-xs-4 ui-padding">
                                                 <a href="javascript:;">
-                                                    <img src="../public/assets/pages/img/page_general_search/2.jpg" />
+                                                    <img src="../public/assets/pages/img/background/59.jpg" />
                                                 </a>
                                             </div>
-                                            <div class="blog-post-content">
-                                                <h2 class="blog-title blog-post-title">
-                                                    <a href="javascript:;">Metronic Blog Post</a>
-                                                </h2>
-                                                <p class="blog-post-desc"> Lorem ipsum dolor sit amet adipiscing elit, sed diam nonummy </p>
-                                                <div class="blog-post-foot">
-                                                    <div class="blog-post-meta">
-                                                        <i class="icon-calendar font-blue"></i>
-                                                        <a href="javascript:;">Oct 24, 2015</a>
-                                                    </div>
-                                                    <div class="blog-post-meta">
-                                                        <i class="icon-bubble font-blue"></i>
-                                                        <a href="javascript:;">14 Comments</a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <div class="blog-post-sm bordered blog-container">
-                                            <div class="blog-img-thumb">
+                                            <div class="col-xs-4 ui-padding">
                                                 <a href="javascript:;">
-                                                    <img src="../public/assets/pages/img/page_general_search/03.jpg" />
+                                                    <img src="../public/assets/pages/img/background/42.jpg" />
                                                 </a>
-                                            </div>
-                                            <div class="blog-post-content">
-                                                <h2 class="blog-title blog-post-title">
-                                                    <a href="javascript:;">Metronic Blog Post</a>
-                                                </h2>
-                                                <p class="blog-post-desc"> Lorem ipsum dolor sit amet adipiscing elit, sed diam nonummy </p>
-                                                <div class="blog-post-foot">
-                                                    <div class="blog-post-meta">
-                                                        <i class="icon-calendar font-blue"></i>
-                                                        <a href="javascript:;">Oct 24, 2015</a>
-                                                    </div>
-                                                    <div class="blog-post-meta">
-                                                        <i class="icon-bubble font-blue"></i>
-                                                        <a href="javascript:;">14 Comments</a>
-                                                    </div>
-                                                </div>
                                             </div>
                                         </div>
                                     </div>
