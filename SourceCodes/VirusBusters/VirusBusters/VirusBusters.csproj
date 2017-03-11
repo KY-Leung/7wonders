@@ -152,6 +152,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="posts.aspx" />
     <Content Include="Scripts\firebase-debug.js" />
     <Content Include="Scripts\firebase.js" />
     <Content Include="test.aspx" />
@@ -195,6 +196,13 @@
     </Compile>
     <Compile Include="map.aspx.designer.cs">
       <DependentUpon>map.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="posts.aspx.cs">
+      <DependentUpon>posts.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="posts.aspx.designer.cs">
+      <DependentUpon>posts.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="default.aspx.cs">
