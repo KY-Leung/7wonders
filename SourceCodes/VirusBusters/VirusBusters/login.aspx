@@ -48,16 +48,15 @@
                     <div class="login-content">
                         <h1>7wonders Admin Login</h1>
                         <p> Lorem ipsum dolor sit amet, coectetuer adipiscing elit sed diam nonummy et nibh euismod aliquam erat volutpat. Lorem ipsum dolor sit amet, coectetuer adipiscing. </p>
-                        <form action="javascript:;" class="login-form" method="post">
-                            <div class="alert alert-danger display-hide">
-                                <button class="close" data-close="alert"></button>
-                                <span>Enter any username and password. </span>
-                            </div>
+                        <form id="form1" runat="server">
+                            <asp:Label ID="Label1" runat="server"></asp:Label>
                             <div class="row">
                                 <div class="col-xs-6">
-                                    <input class="form-control form-control-solid placeholder-no-fix form-group" type="text" autocomplete="off" placeholder="Username" name="username" required/> </div>
+                                    <asp:TextBox id="TextBox1" runat="server" placeholder="Username" name="username" CssClass="form-control form-control-solid placeholder-no-fix form-group"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ControlToValidate="TextBox1" ErrorMessage="Please Enter Your Username" ForeColor="Red"></asp:RequiredFieldValidator> </div>
                                 <div class="col-xs-6">
-                                    <input class="form-control form-control-solid placeholder-no-fix form-group" type="password" autocomplete="off" placeholder="Password" name="password" required/> </div>
+                                    <asp:TextBox id="TextBox2" runat="server" textMode="Password" placeholder="Password" name="password" CssClass="form-control form-control-solid placeholder-no-fix form-group"></asp:TextBox> 
+                                    <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ControlToValidate="TextBox2" ErrorMessage="Please Enter Your word" ForeColor="Red"></asp:RequiredFieldValidator> </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-4">
@@ -72,7 +71,7 @@
                                     <div class="forgot-password">
                                         <a href="javascript:;" id="forget-password" class="forget-password">Forgot Password?</a>
                                     </div>
-                                    <button class="btn green" type="submit">Sign In</button>
+                                    <asp:Button ID="Button1" runat="server" Text="Log In" onclick="Button1_Click" cssclass="btn green"/>
                                 </div>
                             </div>
                         </form>
