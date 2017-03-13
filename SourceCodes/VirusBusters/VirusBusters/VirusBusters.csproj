@@ -141,6 +141,7 @@
     <Content Include="article_details.aspx" />
     <Content Include="article_new.aspx" />
     <Content Include="login.aspx" />
+    <Content Include="logout.aspx" />
     <Content Include="map.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -214,6 +215,13 @@
     </Compile>
     <Compile Include="articles.aspx.designer.cs">
       <DependentUpon>articles.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
     </Compile>
     <Compile Include="map.aspx.cs">
       <DependentUpon>map.aspx</DependentUpon>
