@@ -20,6 +20,9 @@ namespace VirusBusters
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["id"] == null) Response.Redirect("login.aspx");
+            usernameLabel.Text = Session["id"].ToString();
+            myLink.Attributes["href"] = "logout.aspx";
         }
 
 
