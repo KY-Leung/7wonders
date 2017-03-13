@@ -1205,7 +1205,7 @@
                        lng: lngArray[i],
                        title: nameAr[i],
                        infoWindow: {
-                           content: '<p>' + nameAr[i] + '</p>' + '<form method="GET" action="test.aspx"> <input type="hidden" name="Name" value = '+ nameAr[i] + '> <input type="submit" value="Book Appointment" /></form>'
+                           content: '<p>' + nameAr[i] + '</p>' + '<form method="POST" action="appointment_new.aspx"> <input type="hidden" id="name" name="Name" value = "'+  nameAr[i] + '"> <input type="submit" value="Book Appointment" /></form>'
                        }
                    });
                        }
