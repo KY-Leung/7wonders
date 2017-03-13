@@ -11,6 +11,8 @@ namespace VirusBusters
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            string userId = "1"; //insert session userId here
+            Label1.Text = userId;
 
         }
     }
