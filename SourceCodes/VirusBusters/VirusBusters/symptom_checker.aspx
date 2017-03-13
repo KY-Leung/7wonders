@@ -299,13 +299,11 @@
                             <a href="symptom_checker.aspx" class="nav-link nav-toggle">
                                 <i class="icon-calendar"></i>
                                 <span class="title">Symptom Checker</span>
-                                 <span class="selected"></span>
+                                <span class="selected"></span>
                             </a>
                         </li>
                     </ul>
                     <!-- END SIDEBAR MENU -->
-                </div>
-                <!-- END SIDEBAR -->
                 </div>
                 <!-- END SIDEBAR -->
             </div>
@@ -330,35 +328,20 @@
                                 </div>
                                 <div class="portlet-body">
                                     <!-- BEGIN FORM-->
-                                    <form action="#" id="form_sample_3" class="form-horizontal">
+                                    <form action="symptom_checker_result.aspx" id="form_sample_3" class="form-horizontal" method ="POST">
                                         <div class="form-body">
                                             <div class="form-group">
                                                 <label class="control-label col-md-3">Grouped Options</label>
                                                 <div class="col-md-9">
-                                                    <select multiple="multiple" class="multi-select" id="my_multi_select2" name="my_multi_select2[]">
-                                                        <optgroup label="NFC EAST">
-                                                            <option>Dallas Cowboys</option>
-                                                            <option>New York Giants</option>
-                                                            <option>Philadelphia Eagles</option>
-                                                            <option>Washington Redskins</option>
-                                                        </optgroup>
-                                                        <optgroup label="NFC NORTH">
-                                                            <option>Chicago Bears</option>
-                                                            <option>Detroit Lions</option>
-                                                            <option>Green Bay Packers</option>
-                                                            <option>Minnesota Vikings</option>
-                                                        </optgroup>
-                                                        <optgroup label="NFC SOUTH">
-                                                            <option>Atlanta Falcons</option>
-                                                            <option>Carolina Panthers</option>
-                                                            <option>New Orleans Saints</option>
-                                                            <option>Tampa Bay Buccaneers</option>
-                                                        </optgroup>
-                                                        <optgroup label="NFC WEST">
-                                                            <option>Arizona Cardinals</option>
-                                                            <option>St. Louis Rams</option>
-                                                            <option>San Francisco 49ers</option>
-                                                            <option>Seattle Seahawks</option>
+                                                    <select multiple="multiple" class="multi-select" id="my_multi_select2" name="my_multi_select2">
+                                                        <optgroup label="Symptoms">
+                                                            <option value ="headache">Headache</option>
+                                                            <option value ="fever">Fever</option>
+                                                            <option value ="ulcers">Ulcers</option>
+                                                            <option value ="depressed">Depressed Mood</option>
+                                                            <option value ="forgetfulness">Forgetfulness</option>
+                                                            <option value ="hallucinations">Hallucinations</option>
+                                                            <option value ="rash">Rash with small Blisters</option>
                                                         </optgroup>
                                                     </select>
                                                 </div>
@@ -369,7 +352,7 @@
                                                 <div class="col-md-offset-3 col-md-9">
                                                     <button type="submit" class="btn green">
                                                         <i class="fa fa-check"></i> Diagnose</button>
-                                                    <button type="button" class="btn grey-salsa btn-outline">Clear</button>
+                                                   
                                                 </div>
                                             </div>
                                         </div>
