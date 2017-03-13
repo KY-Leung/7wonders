@@ -490,7 +490,7 @@
                                                             </label>
                                                             <div class="col-md-3">
                                                                 <div>
-                                                            <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="cN" DataValueField="cN"></asp:DropDownList>
+                                                            <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="cN" DataValueField="cN"  AppendDataBoundItems="true" EnableViewState="True"></asp:DropDownList>
                                                                 
                                                                 </div>
                                                                 <!-- /input-group -->
@@ -1210,7 +1210,7 @@
                   </DeleteParameters>
                   <InsertParameters>
                       <asp:ControlParameter Name="Id" Type="Int32" ControlID="Label1"/>
-                      <asp:ControlParameter Name="clinicName" Type="String"  ControlID="DropdownList1"/>
+                      <asp:ControlParameter Name="clinicName" Type="String"  ControlID="DropdownList1" PropertyName="SelectedValue" />
                       <asp:ControlParameter Name="date" Type="String" ControlID ="Label3"/>
                       <asp:ControlParameter Name="userID" Type="String" ControlID="Label2" />
                       <asp:ControlParameter Name="time" Type="String" ControlID="DropdownList2"/>
