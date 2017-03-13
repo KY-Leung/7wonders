@@ -332,7 +332,7 @@
                                         <i class=" icon-layers font-red"></i>
                                         <span class="caption-subject font-red bold uppercase">
                                             Making Appointment -
-                                            <span class="step-title"> Step 1 of 2 </span>
+                                            <span class="step-title"> Step 1 of 1 </span>
                                         </span>
                                     </div>
                                     <div class="actions">
@@ -357,14 +357,6 @@
                                                             <span class="number"> 1 </span>
                                                             <span class="desc">
                                                                 <i class="fa fa-check"></i> Appointment Details
-                                                            </span>
-                                                        </a>
-                                                    </li>
-                                                    <li>
-                                                        <a href="#tab4" data-toggle="tab" class="step">
-                                                            <span class="number"> 2 </span>
-                                                            <span class="desc">
-                                                                <i class="fa fa-check"></i> Confirmation
                                                             </span>
                                                         </a>
                                                     </li>
@@ -481,7 +473,7 @@
 
                                                            <tr>
                                                                <td>
-                                                                   <asp:Button ID="Button1" runat="server" Text="Confirm" OnClick="Button1_Click" OnClientClick="return confirm('Are you sure you want to make this appointment?');"/>
+                                                                   <asp:Button ID="Button1" runat="server" Text="Book" cssclass="btn green" OnClick="Button1_Click" OnClientClick="return confirm('Are you sure you want to make this appointment?');"/>
                                                                </td>
                                                            </tr>
 
