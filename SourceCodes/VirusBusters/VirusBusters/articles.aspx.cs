@@ -18,9 +18,13 @@ namespace VirusBusters
 {
     public partial class articles : System.Web.UI.Page
     {
+        string username;
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["id"] == null) Response.Redirect("login.aspx");
+            username = Session["id"].ToString();
+            if (username == null) Response.Redirect("login.aspx");
+            usernameLabel.Text = username;
             myLink.Attributes["href"] = "logout.aspx";
         }
     }

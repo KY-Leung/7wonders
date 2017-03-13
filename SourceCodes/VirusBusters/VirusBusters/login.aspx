@@ -42,12 +42,12 @@
             <div class="row bs-reset">
                 <div class="col-md-6 bs-reset">
                     <div class="login-bg" style="background-image:url(../public/assets/pages/img/login/bg1.jpg)">
-                        <img class="login-logo" src="../public/assets/pages/img/login/logo.png" /> </div>
+                        <img class="login-logo" src="../public/assets/pages/img/login/virusbusters.png" /> </div>
                 </div>
                 <div class="col-md-6 login-container bs-reset">
                     <div class="login-content">
-                        <h1>7wonders Admin Login</h1>
-                        <p> Lorem ipsum dolor sit amet, coectetuer adipiscing elit sed diam nonummy et nibh euismod aliquam erat volutpat. Lorem ipsum dolor sit amet, coectetuer adipiscing. </p>
+                        <h1>VirusBusters Login</h1>
+                        <p>Please enter your credentials to access the system.</p>
                         <form id="form1" runat="server">
                             <asp:Label ID="Label1" runat="server"></asp:Label>
                             <div class="row">
