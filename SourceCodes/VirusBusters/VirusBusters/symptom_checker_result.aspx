@@ -162,7 +162,7 @@
                         <li class="dropdown dropdown-user">
                             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                                 <img alt="" class="img-circle" src="../public/assets/themes/img/avatar3_small.jpg" />
-                                <span class="username username-hide-on-mobile"> Nick </span>
+                                <span class="username username-hide-on-mobile"> <asp:Label id="usernameLabel" runat="server" /> </span>
                                 <i class="fa fa-angle-down"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-default">
@@ -192,7 +192,7 @@
                                         <i class="icon-lock"></i> Lock Screen </a>
                                 </li>
                                 <li>
-                                    <a href="page_user_login_1.html">
+                                    <a href="#" runat="server" id="myLink">
                                         <i class="icon-key"></i> Log Out </a>
                                 </li>
                             </ul>
@@ -243,131 +243,63 @@
                         <li class="nav-item">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="icon-call-end"></i>
-                                <span class="title">Cases</span>
+                                <span class="title">Articles</span>
                                 <span class="arrow"></span>
                             </a>
                             <ul class="sub-menu">
+                                <li class="nav-item ">
+                                    <a href="articles.aspx" class="nav-link ">
+                                        <span class="title">Posts</span>
+                                    </a>
+                                </li>
                                 <li class="nav-item">
-                                    <a href="cases_manage.html" class="nav-link ">
-                                        <span class="title">Manage</span>
+                                    <a href="article_new.aspx" class="nav-link ">
+                                        <span class="title">New</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="javascript:;" class="nav-link ">
+                                        <span class="title">Validate</span>
                                     </a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item start active open">
-                            <a href="javascript:;" class="nav-link nav-toggle">
+                        <li class="nav-item">
+                            <a href="map.aspx" class="nav-link nav-toggle">
                                 <i class="icon-globe"></i>
-                                <span class="title">Diseases</span>
-                                <span class="selected"></span>
-                                <span class="arrow"></span>
-                                <span class="arrow open"></span>
+                                <span class="title">Map</span>
                             </a>
-                            <ul class="sub-menu">
-                                <li class="nav-item start active open">
-                                    <a href="javascript:;" class="nav-link nav-toggle">
-                                        <span class="title">Dengue</span>
-                                        <span class="selected"></span>
-                                    </a>
-                                    <ul class="sub-menu">
-                                        <li class="nav-item start">
-                                            <a onclick="dengueCentral()" class="nav-link ">
-                                                <span class="title">Central</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item start">
-                                            <a onclick="dengueNortheast()" class="nav-link ">
-                                                <span class="title">Northeast</span>
-                                                <span class="selected"></span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item start">
-                                            <a onclick="dengueNorthwest()" class="nav-link ">
-                                                <span class="title">Northwest</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item start">
-                                            <a onclick="dengueSoutheast()" class="nav-link ">
-                                                <span class="title">Southeast</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item start">
-                                            <a onclick="dengueSouthwest()" class="nav-link ">
-                                                <span class="title">SouthWest</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item start">
-                                    <a class="nav-link ">
-                                        <span class="title">Zika Virus</span>
-                                        <span class="badge badge-danger">5</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item start">
-                                    <a href="cases_report.html" class="nav-link ">
-                                        <span class="title">Report Cases</span>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="nav-item  ">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="icon-home"></i>
-                                <span class="title">Clinics</span>
-                                <span class="arrow"></span>
-                            </a>
-                            <ul class="sub-menu">
-                                <li class="nav-item  ">
-                                    <a class="nav-link ">
-                                        <span class="title" onclick="chas()">CHAS Clinics</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a class="nav-link ">
-                                        <span class="title" onclick="clinic()">Polyclinic</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a class="nav-link ">
-                                        <span class="title" onclick="breastscreening()">Breast Screening</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a class="nav-link ">
-                                        <span class="title" onclick="bloodbank()">Bloodbank</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a class="nav-link ">
-                                        <span class="title" onclick="quitCentre()">Quit Centres</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="javascript:;" class="nav-link nav-toggle">
-                                <i class="icon-calendar"></i>
                                 <span class="title">Appointment</span>
                                 <span class="arrow"></span>
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item  ">
-                                    <a href="appointment_new.html" class="nav-link ">
-                                        <span class="title">New</span>
+                                    <a href="appointment_new.aspx" class="nav-link ">
+                                        <span class="title"">New</span>
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
-                                    <a href="appointment_manage.html" class="nav-link ">
+                                    <a href="appointment_manage.aspx" class="nav-link ">
                                         <span class="title">Manage</span>
-                                        <span class="badge badge-danger">2</span>
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
-                                    <a href="appointment_history.html" class="nav-link ">
+                                    <a href="appointment_history.aspx" class="nav-link ">
                                         <span class="title">History</span>
                                     </a>
                                 </li>
                             </ul>
+                        </li>
+                        <li class="nav-item start active open">
+                            <a href="symptom_checker.aspx" class="nav-link nav-toggle">
+                                <i class="icon-calendar"></i>
+                                <span class="title">Symptom Checker</span>
+                                <span class="selected"></span>
+                            </a>
                         </li>
                     </ul>
                     <!-- END SIDEBAR MENU -->
@@ -381,6 +313,9 @@
                 <div class="page-content">
                     <div class="m-heading-1 border-green m-bordered">
                         <h3>Matches for Possible Conditions</h3>
+                        <p>You have chosen: </p> 
+                        <asp:label id="Testing" name="Testing"  runat="server" />
+                        
                         <p>Based on the symptoms you entered, we have calculated matches for possible conditions. The conditions are listed in order of how closely your symptoms match those conditions. This information is meant to be informational, and is not intended as medical advice or a diagnosis. Information you read should not replace the advice of your healthcare provider. You should always seek the advice of a qualified healthcare provider about any questions you may have about a medical condition. As always, if you think you have a medical emergency you should call your doctor or dial "995" immediately.</p>
                     </div>
                     <div class="row">
@@ -401,9 +336,13 @@
                                     </div>
                                 </div>
                                 <div class="portlet-body">
-                                    <div id="chart_6" class="chart" style="height: 525px;"> </div>
+                                    <script src="https://code.highcharts.com/highcharts.js"></script>
+                                    <script src="https://code.highcharts.com/modules/exporting.js"></script>
+                                    <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
+                                    <p> More information about the disease can be found  <a href= "https://www.moh.gov.sg/content/moh_web/home/diseases_and_conditions/h/hfmd.html
+" target="_blank">HERE</a> </p>
                                 </div>
-                                <a href="javascript:;" class="btn default button-previous">
+                                <a href="symptom_checker.aspx"  class="btn default button-previous">
                                     <i class="fa fa-angle-left"></i> Back to Choose Symptom(s)
                                 </a>
                             </div>
@@ -1046,5 +985,435 @@
         <script src="../public/assets/themes/js/quick-sidebar.min.js" type="text/javascript"></script>
         <!-- END THEME LAYOUT SCRIPTS -->
     </body>
+
+
+    <script type="text/javascript">
+
+     
+    var symptoms = "<%=test%>";
+   
+
+    if (symptoms == "fever"){
+
+
+    Highcharts.chart('container', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Possible Conditions'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Conditions',
+        colorByPoint: true,
+        data: [{
+            name: 'Fever',
+            y: 100.00
+        },  ]
+    }]
+});
+       }
+
+else if (symptoms == "headache"){
+
+Highcharts.chart('container', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Possible Conditions'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Conditions',
+        colorByPoint: true,
+        data: [{
+            name: 'Headache',
+            y: 100.00
+        },  ]
+    }]
+});
+       }
+
+else if (symptoms == "ulcers"){
+
+Highcharts.chart('container', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Possible Conditions'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Conditions',
+        colorByPoint: true,
+        data: [{
+            name: 'Ulcers',
+            y: 100.00
+        },  ]
+    }]
+});
+       }
+
+else if (symptoms == "depressed" || symptoms == "forgetfulness" || symptoms == "hallucinations"){
+
+Highcharts.chart('container', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Possible Conditions'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Conditions',
+        colorByPoint: true,
+        data: [{
+            name: 'Normal Symptoms',
+            y: 100.00
+        },  ]
+    }]
+});
+       }
+
+
+else if (symptoms == "headache,fever,ulcers,rash"){
+
+Highcharts.chart('container', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Possible Conditions'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Conditions',
+        colorByPoint: true,
+        data: [{
+            name: 'Hand, Foot and Mouth Diseases',
+            y: 89.00
+        },
+{
+            name: 'Normal ',
+            y: 11.00
+        },   ]
+    }]
+});
+       }
+
+else if (symptoms == "headache,ulcers"){
+
+Highcharts.chart('container', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Possible Conditions'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Conditions',
+        colorByPoint: true,
+        data: [{
+            name: 'Heaty, Drink More Water',
+            y: 54.00
+        },
+{
+            name: 'Exhausted ',
+            y: 23.00
+        },  
+{
+            name: 'Normal ',
+            y: 23.00
+        }, 
+
+ ]
+    }]
+});
+       }
+
+else if (symptoms == "depressed,hallucinations"){
+
+Highcharts.chart('container', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Possible Conditions'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Conditions',
+        colorByPoint: true,
+        data: [{
+            name: 'Depression',
+            y: 85.00
+        },
+{
+            name: 'Mental Disorder',
+            y: 10.00
+        },  
+{
+            name: 'Normal ',
+            y: 5.00
+        }, 
+
+ ]
+    }]
+});
+       }
+
+
+else if (symptoms == "headache,forgetfulness,hallucinations"){
+
+Highcharts.chart('container', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Possible Conditions'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Conditions',
+        colorByPoint: true,
+        data: [{
+            name: 'Amnesia',
+            y: 55.00
+        },
+{
+            name: 'Depression',
+            y: 24.00
+        },  
+{
+            name: 'Stress ',
+            y: 11.00
+        }, 
+{
+            name: 'Normal ',
+            y: 5.00
+        }, 
+{
+            name: 'Hypertension ',
+            y: 5.00
+        }, 
+ ]
+    }]
+});
+       }
+
+
+
+
+
+
+else{
+
+Highcharts.chart('container', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Possible Conditions'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Conditions',
+        colorByPoint: true,
+        data: [{
+            name: 'Normal',
+            y: 70.00
+        }, {
+            name: 'Stressed',
+            y: 25.03,
+            sliced: true,
+            selected: true
+        }, {
+            name: 'Disorder',
+            y: 4.97
+        }, ]
+    }]
+});
+       }
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+     </script>
+
 
 </html>

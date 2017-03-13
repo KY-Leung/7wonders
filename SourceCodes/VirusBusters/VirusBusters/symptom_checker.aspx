@@ -163,7 +163,7 @@
                         <li class="dropdown dropdown-user">
                             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
                                 <img alt="" class="img-circle" src="../public/assets/themes/img/avatar3_small.jpg" />
-                                <span class="username username-hide-on-mobile"> Nick </span>
+                                <span class="username username-hide-on-mobile"> <asp:Label id="usernameLabel" runat="server" /> </span>
                                 <i class="fa fa-angle-down"></i>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-default">
@@ -193,7 +193,7 @@
                                         <i class="icon-lock"></i> Lock Screen </a>
                                 </li>
                                 <li>
-                                    <a href="page_user_login_1.html">
+                                    <a href="#" runat="server" id="myLink">
                                         <i class="icon-key"></i> Log Out </a>
                                 </li>
                             </ul>
@@ -244,131 +244,63 @@
                         <li class="nav-item">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="icon-call-end"></i>
-                                <span class="title">Cases</span>
+                                <span class="title">Articles</span>
                                 <span class="arrow"></span>
                             </a>
                             <ul class="sub-menu">
+                                <li class="nav-item ">
+                                    <a href="articles.aspx" class="nav-link ">
+                                        <span class="title">Posts</span>
+                                    </a>
+                                </li>
                                 <li class="nav-item">
-                                    <a href="cases_manage.html" class="nav-link ">
-                                        <span class="title">Manage</span>
+                                    <a href="article_new.aspx" class="nav-link ">
+                                        <span class="title">New</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="javascript:;" class="nav-link ">
+                                        <span class="title">Validate</span>
                                     </a>
                                 </li>
                             </ul>
                         </li>
-                        <li class="nav-item start active open">
-                            <a href="javascript:;" class="nav-link nav-toggle">
+                        <li class="nav-item">
+                            <a href="map.aspx" class="nav-link nav-toggle">
                                 <i class="icon-globe"></i>
-                                <span class="title">Diseases</span>
-                                <span class="selected"></span>
-                                <span class="arrow"></span>
-                                <span class="arrow open"></span>
+                                <span class="title">Map</span>
                             </a>
-                            <ul class="sub-menu">
-                                <li class="nav-item start active open">
-                                    <a href="javascript:;" class="nav-link nav-toggle">
-                                        <span class="title">Dengue</span>
-                                        <span class="selected"></span>
-                                    </a>
-                                    <ul class="sub-menu">
-                                        <li class="nav-item start">
-                                            <a onclick="dengueCentral()" class="nav-link ">
-                                                <span class="title">Central</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item start">
-                                            <a onclick="dengueNortheast()" class="nav-link ">
-                                                <span class="title">Northeast</span>
-                                                <span class="selected"></span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item start">
-                                            <a onclick="dengueNorthwest()" class="nav-link ">
-                                                <span class="title">Northwest</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item start">
-                                            <a onclick="dengueSoutheast()" class="nav-link ">
-                                                <span class="title">Southeast</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item start">
-                                            <a onclick="dengueSouthwest()" class="nav-link ">
-                                                <span class="title">SouthWest</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item start">
-                                    <a class="nav-link ">
-                                        <span class="title">Zika Virus</span>
-                                        <span class="badge badge-danger">5</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item start">
-                                    <a href="cases_report.html" class="nav-link ">
-                                        <span class="title">Report Cases</span>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="nav-item  ">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="icon-home"></i>
-                                <span class="title">Clinics</span>
-                                <span class="arrow"></span>
-                            </a>
-                            <ul class="sub-menu">
-                                <li class="nav-item  ">
-                                    <a class="nav-link ">
-                                        <span class="title" onclick="chas()">CHAS Clinics</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a class="nav-link ">
-                                        <span class="title" onclick="clinic()">Polyclinic</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a class="nav-link ">
-                                        <span class="title" onclick="breastscreening()">Breast Screening</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a class="nav-link ">
-                                        <span class="title" onclick="bloodbank()">Bloodbank</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a class="nav-link ">
-                                        <span class="title" onclick="quitCentre()">Quit Centres</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="javascript:;" class="nav-link nav-toggle">
-                                <i class="icon-calendar"></i>
                                 <span class="title">Appointment</span>
                                 <span class="arrow"></span>
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item  ">
-                                    <a href="appointment_new.html" class="nav-link ">
-                                        <span class="title">New</span>
+                                    <a href="appointment_new.aspx" class="nav-link ">
+                                        <span class="title"">New</span>
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
-                                    <a href="appointment_manage.html" class="nav-link ">
+                                    <a href="appointment_manage.aspx" class="nav-link ">
                                         <span class="title">Manage</span>
-                                        <span class="badge badge-danger">2</span>
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
-                                    <a href="appointment_history.html" class="nav-link ">
+                                    <a href="appointment_history.aspx" class="nav-link ">
                                         <span class="title">History</span>
                                     </a>
                                 </li>
                             </ul>
+                        </li>
+                        <li class="nav-item start active open">
+                            <a href="symptom_checker.aspx" class="nav-link nav-toggle">
+                                <i class="icon-calendar"></i>
+                                <span class="title">Symptom Checker</span>
+                                <span class="selected"></span>
+                            </a>
                         </li>
                     </ul>
                     <!-- END SIDEBAR MENU -->
@@ -396,35 +328,20 @@
                                 </div>
                                 <div class="portlet-body">
                                     <!-- BEGIN FORM-->
-                                    <form action="#" id="form_sample_3" class="form-horizontal">
+                                    <form action="symptom_checker_result.aspx" id="form_sample_3" class="form-horizontal" method ="POST">
                                         <div class="form-body">
                                             <div class="form-group">
                                                 <label class="control-label col-md-3">Grouped Options</label>
                                                 <div class="col-md-9">
-                                                    <select multiple="multiple" class="multi-select" id="my_multi_select2" name="my_multi_select2[]">
-                                                        <optgroup label="NFC EAST">
-                                                            <option>Dallas Cowboys</option>
-                                                            <option>New York Giants</option>
-                                                            <option>Philadelphia Eagles</option>
-                                                            <option>Washington Redskins</option>
-                                                        </optgroup>
-                                                        <optgroup label="NFC NORTH">
-                                                            <option>Chicago Bears</option>
-                                                            <option>Detroit Lions</option>
-                                                            <option>Green Bay Packers</option>
-                                                            <option>Minnesota Vikings</option>
-                                                        </optgroup>
-                                                        <optgroup label="NFC SOUTH">
-                                                            <option>Atlanta Falcons</option>
-                                                            <option>Carolina Panthers</option>
-                                                            <option>New Orleans Saints</option>
-                                                            <option>Tampa Bay Buccaneers</option>
-                                                        </optgroup>
-                                                        <optgroup label="NFC WEST">
-                                                            <option>Arizona Cardinals</option>
-                                                            <option>St. Louis Rams</option>
-                                                            <option>San Francisco 49ers</option>
-                                                            <option>Seattle Seahawks</option>
+                                                    <select multiple="multiple" class="multi-select" id="my_multi_select2" name="my_multi_select2">
+                                                        <optgroup label="Symptoms">
+                                                            <option value ="headache">Headache</option>
+                                                            <option value ="fever">Fever</option>
+                                                            <option value ="ulcers">Ulcers</option>
+                                                            <option value ="depressed">Depressed Mood</option>
+                                                            <option value ="forgetfulness">Forgetfulness</option>
+                                                            <option value ="hallucinations">Hallucinations</option>
+                                                            <option value ="rash">Rash with small Blisters</option>
                                                         </optgroup>
                                                     </select>
                                                 </div>
@@ -435,7 +352,7 @@
                                                 <div class="col-md-offset-3 col-md-9">
                                                     <button type="submit" class="btn green">
                                                         <i class="fa fa-check"></i> Diagnose</button>
-                                                    <button type="button" class="btn grey-salsa btn-outline">Clear</button>
+                                                   
                                                 </div>
                                             </div>
                                         </div>
