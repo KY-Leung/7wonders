@@ -246,106 +246,36 @@
                         <li class="nav-item">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="icon-call-end"></i>
-                                <span class="title">Cases</span>
+                                <span class="title">Articles</span>
                                 <span class="arrow"></span>
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item">
-                                    <a href="cases_manage.html" class="nav-link ">
-                                        <span class="title">Manage</span>
+                                    <a href="articles.aspx" class="nav-link ">
+                                        <span class="title">Posts</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="article_new.aspx" class="nav-link ">
+                                        <span class="title">New</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="javascript:;" class="nav-link ">
+                                        <span class="title">Validate</span>
                                     </a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <a href="javascript:;" class="nav-link nav-toggle">
+                            <a href="map.aspx" class="nav-link nav-toggle">
                                 <i class="icon-globe"></i>
-                                <span class="title">Diseases</span>
-                                <span class="arrow"></span>
+                                <span class="title">Map</span>
                             </a>
-                            <ul class="sub-menu">
-                                <li class="nav-item">
-                                    <a href="javascript:;" class="nav-link nav-toggle">
-                                        <span class="title">Dengue</span>
-                                    </a>
-                                    <ul class="sub-menu">
-                                        <li class="nav-item">
-                                            <a onclick="dengueCentral()" class="nav-link ">
-                                                <span class="title">Central</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a onclick="dengueNortheast()" class="nav-link ">
-                                                <span class="title">Northeast</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a onclick="dengueNorthwest()" class="nav-link ">
-                                                <span class="title">Northwest</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a onclick="dengueSoutheast()" class="nav-link ">
-                                                <span class="title">Southeast</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a onclick="dengueSouthwest()" class="nav-link ">
-                                                <span class="title">SouthWest</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link ">
-                                        <span class="title">Zika Virus</span>
-                                        <span class="badge badge-danger">5</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="cases_report.html" class="nav-link ">
-                                        <span class="title">Report Cases</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="javascript:;" class="nav-link nav-toggle">
-                                <i class="icon-home"></i>
-                                <span class="title">Clinics</span>
-                                <span class="arrow"></span>
-                            </a>
-                            <ul class="sub-menu">
-                                <li class="nav-item  ">
-                                    <a class="nav-link ">
-                                        <span class="title" onclick="chas()">CHAS Clinics</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a class="nav-link ">
-                                        <span class="title" onclick="clinic()">Polyclinic</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a class="nav-link ">
-                                        <span class="title" onclick="breastscreening()">Breast Screening</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a class="nav-link ">
-                                        <span class="title" onclick="bloodbank()">Bloodbank</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a class="nav-link ">
-                                        <span class="title" onclick="quitCentre()">Quit Centres</span>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="nav-item start active open">
                             <a href="javascript:;" class="nav-link nav-toggle">
-                                <i class="icon-calendar"></i>
+                                <i class="icon-home"></i>
                                 <span class="title">Appointment</span>
                                 <span class="selected"></span>
                                 <span class="arrow"></span>
@@ -353,23 +283,27 @@
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item start">
-                                    <a href="appointment_new.html" class="nav-link ">
-                                        <span class="title">New</span>
-                                        <span class="selected"></span>
+                                    <a href="appointment_new.aspx" class="nav-link ">
+                                        <span class="title"">New</span>
                                     </a>
                                 </li>
                                 <li class="nav-item start active open">
-                                    <a href="appointment_manage.html" class="nav-link ">
+                                    <a href="appointment_manage.aspx" class="nav-link ">
                                         <span class="title">Manage</span>
-                                        <span class="badge badge-danger">2</span>
                                     </a>
                                 </li>
                                 <li class="nav-item start">
-                                    <a href="appointment_history.html" class="nav-link ">
+                                    <a href="appointment_history.aspx" class="nav-link ">
                                         <span class="title">History</span>
                                     </a>
                                 </li>
                             </ul>
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="symptom_checker.aspx" class="nav-link nav-toggle">
+                                <i class="icon-calendar"></i>
+                                <span class="title">Symptom Checker</span>
+                            </a>
                         </li>
                     </ul>
                     <!-- END SIDEBAR MENU -->

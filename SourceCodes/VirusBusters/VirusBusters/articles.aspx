@@ -262,7 +262,7 @@
                                 </li>
                                 <li class="nav-item start">
                                     <a href="javascript:;" class="nav-link ">
-                                        <span class="title">History</span>
+                                        <span class="title">Validate</span>
                                     </a>
                                 </li>
                             </ul>
@@ -282,23 +282,23 @@
                             <ul class="sub-menu">
                                 <li class="nav-item  ">
                                     <a href="appointment_new.aspx" class="nav-link ">
-                                        <span class="title" onclick="chas()">New</span>
+                                        <span class="title"">New</span>
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
                                     <a href="appointment_manage.aspx" class="nav-link ">
-                                        <span class="title" onclick="clinic()">Manage</span>
+                                        <span class="title">Manage</span>
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
                                     <a href="appointment_history.aspx" class="nav-link ">
-                                        <span class="title" onclick="breastscreening()">History</span>
+                                        <span class="title">History</span>
                                     </a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item  ">
-                            <a href="symptom_checker.html" class="nav-link nav-toggle">
+                            <a href="symptom_checker.aspx" class="nav-link nav-toggle">
                                 <i class="icon-calendar"></i>
                                 <span class="title">Symptom Checker</span>
                             </a>

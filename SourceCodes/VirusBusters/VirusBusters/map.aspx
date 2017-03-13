@@ -192,7 +192,7 @@
                                         <i class="icon-lock"></i> Lock Screen </a>
                                 </li>
                                 <li>
-                                    <a href="index.html">
+                                    <a href="#" runat="server" id="myLink">
                                         <i class="icon-key"></i> Log Out </a>
                                 </li>
                             </ul>
@@ -243,133 +243,63 @@
                         <li class="nav-item">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="icon-call-end"></i>
-                                <span class="title">Cases</span>
+                                <span class="title">Articles</span>
                                 <span class="arrow"></span>
                             </a>
                             <ul class="sub-menu">
+                                <li class="nav-item ">
+                                    <a href="articles.aspx" class="nav-link ">
+                                        <span class="title">Posts</span>
+                                    </a>
+                                </li>
                                 <li class="nav-item">
-                                    <a href="cases_manage.html" class="nav-link ">
-                                        <span class="title">Manage</span>
+                                    <a href="article_new.aspx" class="nav-link ">
+                                        <span class="title">New</span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="javascript:;" class="nav-link ">
+                                        <span class="title">Validate</span>
                                     </a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav-item start active open">
-                            <a href="javascript:;" class="nav-link nav-toggle">
+                            <a href="map.aspx" class="nav-link nav-toggle">
                                 <i class="icon-globe"></i>
-                                <span class="title">Diseases</span>
+                                <span class="title">Map</span>
                                 <span class="selected"></span>
-                                <span class="arrow"></span>
-                                <span class="arrow open"></span>
                             </a>
-                            <ul class="sub-menu">
-                                <li class="nav-item start active open">
-                                    <a href="javascript:;" class="nav-link nav-toggle">
-                                        <span class="title">Dengue</span>
-                                        <span class="selected"></span>
-                                    </a>
-                                    <ul class="sub-menu">
-                                        <li class="nav-item start">
-                                            <a onclick="dengueCentral()" class="nav-link ">
-                                                <span class="title">Central</span>
-
-                                            </a>
-                                        </li>
-                                        <li class="nav-item start">
-                                            <a onclick="dengueNortheast()" class="nav-link ">
-                                                <span class="title">Northeast</span>
-                                                <span class="selected"></span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item start">
-                                            <a onclick="dengueNorthwest()" class="nav-link ">
-                                                <span class="title">Northwest</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item start">
-                                            <a onclick="dengueSoutheast()" class="nav-link ">
-                                                <span class="title">Southeast</span>
-                                            </a>
-                                        </li>
-                                        <li class="nav-item start">
-                                            <a onclick="dengueSouthwest()" class="nav-link ">
-                                                <span class="title">SouthWest</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li class="nav-item start">
-                                    <a class="nav-link ">
-                                        <span class="title">Zika Virus</span>
-                                        <span class="badge badge-danger">5</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item start">
-                                    <a href="cases_report.html" class="nav-link ">
-                                        <span class="title">Report Cases</span>
-                                    </a>
-                                </li>
-                            </ul>
                         </li>
                         <li class="nav-item  ">
                             <a href="javascript:;" class="nav-link nav-toggle">
                                 <i class="icon-home"></i>
-                                <span class="title">Clinics</span>
-                                <span class="arrow"></span>
-                            </a>
-                            <ul class="sub-menu">
-
-                                <li class="nav-item  ">
-                                    <a class="nav-link ">
-                                        <span class="title" onclick = "chas()">CHAS Clinics</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a class="nav-link ">
-                                        <span class="title" onclick="clinic()">Polyclinic</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a class="nav-link ">
-                                        <span class="title" onclick ="breastscreening()">Breast Screening</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a class="nav-link ">
-                                        <span class="title" onclick="bloodbank()">Bloodbank</span>
-                                    </a>
-                                </li>
-                                <li class="nav-item  ">
-                                    <a class="nav-link ">
-                                        <span class="title" onclick="quitCentre()">Quit Centres</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="nav-item  ">
-                            <a href="javascript:;" class="nav-link nav-toggle">
-                                <i class="icon-calendar"></i>
                                 <span class="title">Appointment</span>
                                 <span class="arrow"></span>
                             </a>
                             <ul class="sub-menu">
                                 <li class="nav-item  ">
-                                    <a href="appointment_new.html" class="nav-link ">
-                                        <span class="title">New</span>
+                                    <a href="appointment_new.aspx" class="nav-link ">
+                                        <span class="title"">New</span>
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
-                                    <a href="appointment_manage.html" class="nav-link ">
+                                    <a href="appointment_manage.aspx" class="nav-link ">
                                         <span class="title">Manage</span>
-                                        <span class="badge badge-danger">2</span>
                                     </a>
                                 </li>
                                 <li class="nav-item  ">
-                                    <a href="appointment_history.html" class="nav-link ">
+                                    <a href="appointment_history.aspx" class="nav-link ">
                                         <span class="title">History</span>
                                     </a>
                                 </li>
                             </ul>
+                        </li>
+                        <li class="nav-item  ">
+                            <a href="symptom_checker.aspx" class="nav-link nav-toggle">
+                                <i class="icon-calendar"></i>
+                                <span class="title">Symptom Checker</span>
+                            </a>
                         </li>
                     </ul>
                     <!-- END SIDEBAR MENU -->
@@ -381,143 +311,8 @@
             <div class="page-content-wrapper">
                 <!-- BEGIN CONTENT BODY -->
                 <div class="page-content">
-                    <!-- BEGIN PAGE HEADER-->
-                    <!-- BEGIN THEME PANEL -->
-                    <div class="theme-panel hidden-xs hidden-sm">
-                        <div class="toggler"> </div>
-                        <div class="toggler-close"> </div>
-                        <div class="theme-options">
-                            <div class="theme-option theme-colors clearfix">
-                                <span> THEME COLOR </span>
-                                <ul>
-                                    <li class="color-default current tooltips" data-style="default" data-container="body" data-original-title="Default"> </li>
-                                    <li class="color-darkblue tooltips" data-style="darkblue" data-container="body" data-original-title="Dark Blue"> </li>
-                                    <li class="color-blue tooltips" data-style="blue" data-container="body" data-original-title="Blue"> </li>
-                                    <li class="color-grey tooltips" data-style="grey" data-container="body" data-original-title="Grey"> </li>
-                                    <li class="color-light tooltips" data-style="light" data-container="body" data-original-title="Light"> </li>
-                                    <li class="color-light2 tooltips" data-style="light2" data-container="body" data-html="true" data-original-title="Light 2"> </li>
-                                </ul>
-                            </div>
-                            <div class="theme-option">
-                                <span> Theme Style </span>
-                                <select class="layout-style-option form-control input-sm">
-                                    <option value="square" selected="selected">Square corners</option>
-                                    <option value="rounded">Rounded corners</option>
-                                </select>
-                            </div>
-                            <div class="theme-option">
-                                <span> Layout </span>
-                                <select class="layout-option form-control input-sm">
-                                    <option value="fluid" selected="selected">Fluid</option>
-                                    <option value="boxed">Boxed</option>
-                                </select>
-                            </div>
-                            <div class="theme-option">
-                                <span> Header </span>
-                                <select class="page-header-option form-control input-sm">
-                                    <option value="fixed" selected="selected">Fixed</option>
-                                    <option value="default">Default</option>
-                                </select>
-                            </div>
-                            <div class="theme-option">
-                                <span> Top Menu Dropdown</span>
-                                <select class="page-header-top-dropdown-style-option form-control input-sm">
-                                    <option value="light" selected="selected">Light</option>
-                                    <option value="dark">Dark</option>
-                                </select>
-                            </div>
-                            <div class="theme-option">
-                                <span> Sidebar Mode</span>
-                                <select class="sidebar-option form-control input-sm">
-                                    <option value="fixed">Fixed</option>
-                                    <option value="default" selected="selected">Default</option>
-                                </select>
-                            </div>
-                            <div class="theme-option">
-                                <span> Sidebar Menu </span>
-                                <select class="sidebar-menu-option form-control input-sm">
-                                    <option value="accordion" selected="selected">Accordion</option>
-                                    <option value="hover">Hover</option>
-                                </select>
-                            </div>
-                            <div class="theme-option">
-                                <span> Sidebar Style </span>
-                                <select class="sidebar-style-option form-control input-sm">
-                                    <option value="default" selected="selected">Default</option>
-                                    <option value="light">Light</option>
-                                </select>
-                            </div>
-                            <div class="theme-option">
-                                <span> Sidebar Position </span>
-                                <select class="sidebar-pos-option form-control input-sm">
-                                    <option value="left" selected="selected">Left</option>
-                                    <option value="right">Right</option>
-                                </select>
-                            </div>
-                            <div class="theme-option">
-                                <span> Footer </span>
-                                <select class="page-footer-option form-control input-sm">
-                                    <option value="fixed">Fixed</option>
-                                    <option value="default" selected="selected">Default</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- END THEME PANEL -->
-                    <!-- END PAGE HEADER-->
                     <!-- Google Map API -->
-
-                    <div id="map" style=" height: 500px;"></div>
-
-
-                    <div class="row">
-                        <div class="col-md-8 col-sm-6">
-                            <div class="portlet light ">
-                                <div class="portlet-title">
-                                    <div class="caption">
-                                        <span class="caption-subject bold uppercase font-dark">Revenue</span>
-                                        <span class="caption-helper">distance stats...</span>
-                                    </div>
-                                    <div class="actions">
-                                        <a class="btn btn-circle btn-icon-only btn-default" href="#">
-                                            <i class="icon-cloud-upload"></i>
-                                        </a>
-                                        <a class="btn btn-circle btn-icon-only btn-default" href="#">
-                                            <i class="icon-wrench"></i>
-                                        </a>
-                                        <a class="btn btn-circle btn-icon-only btn-default" href="#">
-                                            <i class="icon-trash"></i>
-                                        </a>
-                                        <a class="btn btn-circle btn-icon-only btn-default fullscreen" href="#"> </a>
-                                    </div>
-                                </div>
-                                <div class="portlet-body">
-                                    <div id="chartdiv"></div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-                            <div class="portlet light ">
-                                <!-- Start of Testing -->
-                            	<h1 id="omg"></h1>
-                              <label id="L1"></label>
-                              <label id="L2"></label>
-                              <label id="L3"></label>
-                        
-                                <button id="BB" onclick="bloodbank()">Bloodbank</button>
-                                <button id="BS" onclick="BScreen()">Breast Screening</button>
-                                <!-- End of Testing -->
-                                <!--
-                                <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/hashtag/Dengue" data-widget-id="780830161646161920">#Dengue Tweets</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-                                -->
-                           
-                                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-                           
-                                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="test" />
-                           
-                            </div>
-                        </div>
-                    </div>
+                    <div id="map" style=" height: 600px;"></div>
                 </div>
                 <!-- END CONTENT BODY -->
             </div>

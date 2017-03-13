@@ -27,7 +27,6 @@ namespace VirusBusters
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            TextBox1.Text = "haha";
             SqlDataAdapter da = new SqlDataAdapter("Select * from clinic", ConfigurationManager.ConnectionStrings["myDB"].ConnectionString);
             DataSet ds = new DataSet();
             da.Fill(ds);
@@ -35,8 +34,8 @@ namespace VirusBusters
 
             String query = "Select count(*) from clinic";
             count = Convert.ToInt32(RunCommand(query));
-             latArray = new String[count];
-             lngArray = new String[count];
+            latArray = new String[count];
+            lngArray = new String[count];
             nameAr = new String[count];
 
             for (int i=0; i<count; i++)
@@ -52,7 +51,7 @@ namespace VirusBusters
 
                 Page.ClientScript.RegisterArrayDeclaration("latArray", ds.Tables[0].Rows[i]["lat"].ToString());
                 Page.ClientScript.RegisterArrayDeclaration("lngArray", ds.Tables[0].Rows[i]["long"].ToString());
-               Page.ClientScript.RegisterArrayDeclaration("nameAr",name.ToString() );
+                Page.ClientScript.RegisterArrayDeclaration("nameAr",name.ToString() );
 
             }
 
@@ -87,7 +86,6 @@ namespace VirusBusters
          
             string query = "SELECT count(*) FROM clinic ";
             string rows = RunCommand(query);
-            TextBox1.Text = rows.ToString();
 
 
         }
@@ -96,14 +94,12 @@ namespace VirusBusters
         {
             string query = "SELECT count(*) FROM clinic ";
             string rows = RunCommand(query);
-            TextBox1.Text = rows.ToString();
             Response.Redirect("test.aspx?value=" + rows);//sending the name to other page
         }
 
         protected void Button2_Click(object sender, CommandEventArgs e)
         {
 
-            TextBox1.Text = e.CommandArgument.ToString();
 
         }
 
