@@ -458,9 +458,10 @@
                                                                 <span class="required"> * </span>
                                                             </label>
                                                             <div class="col-md-3">
-                                                                <div class="input-group input-medium date date-picker" data-date-format="yyyy/mm/dd" data-date-start-date="+0d">
+                                                                <div class="input-group input-medium date date-picker" data-date-format="yyyy/mm/dd">
                                                                     
-                                                                    <asp:TextBox ID="date" runat="server" class="form-control" name="appt_date" Enabled="False"></asp:TextBox>
+                                                                    <asp:TextBox ID="DateBox" runat="server" class="form-control"  Enabled="true" OnTextChanged="DateBox_TextChanged"></asp:TextBox>
+
                                                                     <span class="input-group-btn">
                                                                         <button class="btn default" type="button" style="margin-right:29px">
                                                                             <i class="fa fa-calendar"></i>
@@ -531,8 +532,7 @@
                                                                      <asp:ListItem>2000</asp:ListItem>
                                                                      <asp:ListItem>2100</asp:ListItem>
                                                                     </asp:DropDownList>
-                                                                </div>
-                                                                <!-- /input-group -->
+                                                                </div>  <!-- /input-group -->
                                                             </div>
                                                         </div>
 
@@ -542,6 +542,12 @@
                                                              <tr>
                                                                <td>
                                                                    <br />
+                                                               </td>
+                                                           </tr>
+
+                                                           <tr>
+                                                               <td>
+                                                                   <asp:Button ID="Button1" runat="server" Text="Confirm" OnClick="Button1_Click" OnClientClick="return confirm('Are you sure you want to make this appointment?');"/>
                                                                </td>
                                                            </tr>
 
@@ -1198,8 +1204,37 @@
         <script src="../public/assets/themes/js/quick-sidebar.min.js" type="text/javascript"></script>
         <!-- END THEME LAYOUT SCRIPTS -->
               <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:VirusBustersDBConnectionString %>" SelectCommand="SELECT [cN] FROM [clinic]"></asp:SqlDataSource>
-              <asp:SqlDataSource ID="SqlDataSource2" runat="server"></asp:SqlDataSource>
-              </form>
+              <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:VirusBustersDBConnectionString %>" DeleteCommand="DELETE FROM [appointment] WHERE [Id] = @Id" InsertCommand="INSERT INTO [appointment] ([Id], [clinicName], [date], [userID], [time]) VALUES (@Id, @clinicName, @date, @userID, @time)" SelectCommand="SELECT * FROM [appointment]" UpdateCommand="UPDATE [appointment] SET [clinicName] = @clinicName, [date] = @date, [userID] = @userID, [time] = @time WHERE [Id] = @Id">
+                  <DeleteParameters>
+                      <asp:Parameter Name="Id" Type="Int32" />
+                  </DeleteParameters>
+                  <InsertParameters>
+                      <asp:ControlParameter Name="Id" Type="Int32" ControlID="Label1"/>
+                      <asp:ControlParameter Name="clinicName" Type="String"  ControlID="DropdownList1"/>
+                      <asp:ControlParameter Name="date" Type="String" ControlID ="Label3"/>
+                      <asp:ControlParameter Name="userID" Type="String" ControlID="Label2" />
+                      <asp:ControlParameter Name="time" Type="String" ControlID="DropdownList2"/>
+                  </InsertParameters>
+                  <UpdateParameters>
+                      <asp:Parameter Name="clinicName" Type="String" />
+                      <asp:Parameter Name="date" Type="String" />
+                      <asp:Parameter Name="userID" Type="String" />
+                      <asp:Parameter Name="time" Type="String" />
+                      <asp:Parameter Name="Id" Type="Int32" />
+                  </UpdateParameters>
+              </asp:SqlDataSource>
+              <asp:Label ID="Label1" runat="server" Text="Label" Visible="False"></asp:Label>
+              <asp:Label ID="Label2" runat="server" Text="Label" Visible="false"></asp:Label>
+              <asp:Label ID="Label3" runat="server" Text="Label" Visible="false"></asp:Label>
+
+
+          </form>
               </body>
+    <script runat="server">
+        protected void DateBox_TextChanged(object sender, System.EventArgs e)
+        {
+            
+        }
+</script>
 
 </html>
