@@ -21,7 +21,7 @@ namespace VirusBusters
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["id"] == null) Response.Redirect("login.aspx");
-            myLink.Attributes["href"] = "login.aspx";
+            myLink.Attributes["href"] = "logout.aspx";
         }
     }
 }
