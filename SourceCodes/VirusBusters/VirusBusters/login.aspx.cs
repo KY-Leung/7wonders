@@ -30,6 +30,7 @@ namespace VirusBusters
             if (dt.Rows.Count > 0)
             {
                 Session["id"] = TextBox1.Text;
+                Session["isAdmin"] = ds.Tables[0].Rows[0]["isAdmin"].ToString();
                 Response.Redirect("articles.aspx");
                 Session.RemoveAll();
             }
