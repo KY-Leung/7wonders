@@ -13,10 +13,16 @@ namespace VirusBusters
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string name = Request.Form["name"];
-            DropDownList1.SelectedValue = name;
+            if (!Page.IsPostBack)
+            {
+                string name = Request.Form["name"];
+
+
+                DropDownList1.SelectedValue = name;
+            }
+            
             Label2.Text = "1"; // put user session ID here
-            string query = "SELECT count(*) FROM appointment ";
+            string query = "SELECT MAX(Id) FROM appointment ";
             int rows = Convert.ToInt32(RunCommand(query)) + 1;
             Label1.Text = rows.ToString();
           
