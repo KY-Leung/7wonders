@@ -23,16 +23,8 @@ namespace VirusBusters
         protected string test;
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["id"] == null) Response.Redirect("login.aspx");
-            usernameLabel.Text = Session["id"].ToString();
-            myLink.Attributes["href"] = "logout.aspx";
-
             test = Request.Form["my_multi_select2"].ToString();
             Testing.Text = test;
-
         }
-
-
-    
     }
 }

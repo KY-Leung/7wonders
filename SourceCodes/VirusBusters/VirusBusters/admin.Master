@@ -250,7 +250,7 @@
                         <ul class="sub-menu">
                             <li class="nav-item">
                                 <a href="articles.aspx" class="nav-link ">
-                                    <span class="title">Posts</span>
+                                    <span class="title">All</span>
                                 </a>
                             </li>
                             <li class="nav-item">

@@ -18,13 +18,13 @@ namespace VirusBusters
 {
     public partial class symptom_checker : System.Web.UI.Page
     {
-        protected void Page_Load(object sender, EventArgs e)
+        protected void Page_PreInit(object sender, EventArgs e)
         {
-            if (Session["id"] == null) Response.Redirect("login.aspx");
-            usernameLabel.Text = Session["id"].ToString();
-            myLink.Attributes["href"] = "logout.aspx";
+            if (Session["id"] != null) this.MasterPageFile = "~/admin.master";
         }
 
-
+        protected void Page_Load(object sender, EventArgs e)
+        {
+        }
     }
 }
