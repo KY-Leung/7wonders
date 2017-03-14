@@ -149,6 +149,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="admin.Master" />
+    <Content Include="public.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -253,6 +254,13 @@
     </Compile>
     <Compile Include="admin.Master.designer.cs">
       <DependentUpon>admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="public.Master.cs">
+      <DependentUpon>public.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="public.Master.designer.cs">
+      <DependentUpon>public.Master</DependentUpon>
     </Compile>
     <Compile Include="symptom_checker.aspx.cs">
       <DependentUpon>symptom_checker.aspx</DependentUpon>
