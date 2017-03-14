@@ -316,8 +316,15 @@
                 <!-- BEGIN CONTENT BODY -->
                 <div class="page-content">
                     <div class="m-heading-1 border-green m-bordered">
-                        <h3>Create New Atricle</h3>
-                        <p>--- Some instructions here ---</p>
+                        <h3>Create New Article</h3>
+                        <p>Medical staff will create new articles here.</p>
+                           <p><u>  General rules to follow : </u></p>
+                           <p>  1. No profanities allowed. </p>
+                           <p>  2. All sources used must be cited. </p>
+                           <p>  3. All articles are to be medical related. </p>
+                           <p>  4. No repeated posting of the same articles.  </p>
+                           <p>5. All submissions are subjected to approval by the administrator.
+                        </p>
                     </div>
                     <div class="row">
                         <div class="col-md-12">
@@ -326,12 +333,12 @@
                                 <div class="portlet-title">
                                     <div class="caption">
                                         <i class="icon-settings font-dark"></i>
-                                        <span class="caption-subject font-dark sbold uppercase">Advance Validation</span>
+                                        <span class="caption-subject font-dark sbold uppercase">Create Article</span>
                                     </div>
                                 </div>
                                 <div class="portlet-body">
                                     <!-- BEGIN FORM-->
-                                    <form action="#" id="form_sample_3" class="form-horizontal">
+                                    <form id="form_sample_3" runat="server">
                                         <div class="form-body">
                                             <div class="alert alert-danger display-hide">
                                                 <button class="close" data-close="alert"></button> You have some form errors. Please check below. </div>
@@ -370,7 +377,7 @@
                                         <div class="form-actions">
                                             <div class="row">
                                                 <div class="col-md-offset-3 col-md-9">
-                                                    <button type="submit" class="btn green">Submit</button>
+                                                <asp:Button ID="Button1" runat="server" Text="Submit" onclick="Button1_Click" cssclass="btn green"/>
                                                 </div>
                                             </div>
                                         </div>
@@ -383,6 +390,8 @@
                     </div>
                 </div>
                 <!-- END CONTENT BODY -->
+            </div>
+            <!-- END CONTENT -->
             </div>
             <!-- END CONTENT -->
             <!-- BEGIN QUICK SIDEBAR -->

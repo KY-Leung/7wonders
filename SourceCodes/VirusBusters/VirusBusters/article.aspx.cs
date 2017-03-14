@@ -16,18 +16,15 @@ using System.Data;
 
 namespace VirusBusters
 {
-    public partial class article_new : System.Web.UI.Page
+    public partial class article : System.Web.UI.Page
     {
+        string username;
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["id"] == null) Response.Redirect("login.aspx");
             usernameLabel.Text = Session["id"].ToString();
             myLink.Attributes["href"] = "logout.aspx";
-        }
-
-        protected void Button1_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("article.aspx");
         }
     }
 }
