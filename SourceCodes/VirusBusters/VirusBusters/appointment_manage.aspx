@@ -1,7 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="appointment_manage.aspx.cs" Inherits="VirusBusters.appointment_manage" MasterPageFile="~/admin.Master" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="appointment_manage.aspx.cs" Inherits="VirusBusters.appointment_manage" MasterPageFile="~/public.Master" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
-    <!-- TITLE-->
     Manage Appointment
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="PageLevelPluginsLink" runat="server">

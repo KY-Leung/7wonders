@@ -138,7 +138,6 @@
     <Content Include="appointment_history.aspx" />
     <Content Include="appointment_manage.aspx" />
     <Content Include="appointment_new.aspx" />
-    <Content Include="article.aspx" />
     <Content Include="article_details.aspx" />
     <Content Include="article_new.aspx" />
     <Content Include="login.aspx" />
@@ -190,13 +189,6 @@
     </Compile>
     <Compile Include="appointment_new.aspx.designer.cs">
       <DependentUpon>appointment_new.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="article.aspx.cs">
-      <DependentUpon>article.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="article.aspx.designer.cs">
-      <DependentUpon>article.aspx</DependentUpon>
     </Compile>
     <Compile Include="article_details.aspx.cs">
       <DependentUpon>article_details.aspx</DependentUpon>
