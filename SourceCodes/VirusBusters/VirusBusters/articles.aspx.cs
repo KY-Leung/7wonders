@@ -18,7 +18,6 @@ namespace VirusBusters
 {
     public partial class articles : System.Web.UI.Page
     {
-        string username;
 
         protected void Page_Load(object sender, EventArgs e)
         {
