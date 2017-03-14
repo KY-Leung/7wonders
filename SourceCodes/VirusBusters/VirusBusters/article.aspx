@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="article_details.aspx.cs" Inherits="VirusBusters.article_details" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="article.aspx.cs" Inherits="VirusBusters.article" %>
 
 <!DOCTYPE html>
 
@@ -8,7 +8,7 @@
 
     <head>
         <meta charset="utf-8" />
-        <title>Details</title>
+        <title>Articles</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta content="" name="description" />
@@ -314,121 +314,229 @@
                 <!-- BEGIN CONTENT BODY -->
                 <div class="page-content">
                     <!-- END PAGE HEADER-->
-                    <div class="blog-page blog-content-2">
+                    <div class="blog-page blog-content-1">
                         <div class="row">
-                            <div class="col-lg-9">
-                                <div class="blog-single-content bordered blog-container">
-                                    <div class="blog-single-head">
-                                        <h1 class="blog-single-head-title">Hand Foot Mouth disease</h1>
-                                        <div class="blog-single-head-date">
-                                            <i class="icon-calendar font-blue"></i>
-                                            <a href="javascript:;">Oct 24, 2015</a>
+                            <div class="col-lg-6">
+                                <div class="blog-post-lg bordered blog-container">
+                                    <div class="blog-img-thumb">
+                                        <a href="javascript:;">
+                                            <img src="../public/assets/pages/img/article/hfm.jpg" />
+                                        </a>
+                                    </div>
+                                    <div class="blog-post-content">
+                                        <h2 class="blog-title blog-post-title">
+                                            <a href="article_details.aspx">Hand Foot Mouth Diseases</a>
+                                        </h2> 
+                                        <p class="blog-post-desc"> Hand-foot-and-mouth disease is caused by a virus called an enterovirus.The virus spreads easily through coughing and sneezing. It can also spread through infected stool, such as when you change a diaper or when a young child gets stool on his or her hands and then touches objects that other children put in their mouths. Often the disease breaks out within a community. 
+                                            It usually takes 3 to 6 days for a person to get symptoms of hand-foot-and-mouth disease after being exposed to the virus. This is called the incubation period. </p>
+                                        <div class="blog-post-foot">
+                                            <ul class="blog-post-tags">
+                                                <li class="uppercase">
+                                                    <a href="javascript:;">Baby</a>
+                                                </li>
+                                                <li class="uppercase">
+                                                    <a href="javascript:;">Infection</a>
+                                                </li>
+                                                <li class="uppercase">
+                                                    <a href="javascript:;">Virus</a>
+                                                </li>
+                                            </ul>
+                                            <div class="blog-post-meta">
+                                                <i class="icon-calendar font-blue"></i>
+                                                <a href="javascript:;">Oct 24, 2015</a>
+                                            </div>
+                                            <div class="blog-post-meta">
+                                                <i class="icon-bubble font-blue"></i>
+                                                <a href="javascript:;">14 Comments</a>
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="blog-single-img">
-                                        <img src="../public/assets/pages/img/article/hfm.jpg" /> </div>
-                                    <div class="blog-single-desc">
-                                        <p><b>What is hand-foot-and-mouth disease?</b></p>
-                                        <p> Hand-foot-and-mouth disease is an illness that causes sores in or on the mouth and on the hands, feet, and sometimes the buttocks and legs. The sores may be painful. The illness usually doesn't last more than a week or so. Hand-foot-and-mouth disease is common in children but can also occur in adults. It can occur at any time of year but is most common in the summer and fall. It is not the same as other diseases that have similar names: foot-and-mouth disease (sometimes called hoof-and-mouth disease) or mad cow disease. These diseases almost always occur in animals. </p>
-                                        <p><b>What causes hand-foot-and-mouth disease?</b></p>
-                                        <p> Hand-foot-and-mouth disease is caused by a virus called an enterovirus. The virus spreads easily through coughing and sneezing. It can also spread through infected stool, such as when you change a diaper or when a young child gets stool on his or her hands and then touches objects that other children put in their mouths. Often the disease breaks out within a community. It usually takes 3 to 6 days for a person to get symptoms of hand-foot-and-mouth disease after being exposed to the virus. This is called the incubation period. </p>
-                                        <p><b>What are the symptoms?</b></p>
-                                        <p>At first your child may feel tired, get a sore throat, or have a fever of around 101°F (38°C) to 103°F (39°C). Then in a day or two, sores or blisters may appear in or on the mouth and on the hands, feet, and sometimes the buttocks. In some cases a skin rash may appear before the blisters do. The blisters may break open and crust over. The sores and blisters usually go away in a week or so. In some cases there are no symptoms, or they are very mild. Parents may get the disease from their children and not even realize it.</p>
-                                        <p><b>How is hand-foot-and-mouth disease diagnosed?</b></p>  
-                                        <p>A doctor can tell if your child has hand-foot-and-mouth disease by the symptoms you describe and by looking at the sores and blisters. Tests usually aren't needed.</p>                                 
+                                </div>
+                                <div class="blog-post-lg bordered blog-container">
+                                    <div class="blog-img-thumb">
+                                        <a href="javascript:;">
+                                            <img src="../public/assets/pages/img/article/dengue.jpg" />
+                                        </a>
                                     </div>
-                                    <div class="blog-single-foot">
-                                        <ul class="blog-post-tags">
-                                            <li class="uppercase">
-                                                <a href="javascript:;">Baby</a>
-                                            </li>
-                                            <li class="uppercase">
-                                                <a href="javascript:;">Infection</a>
-                                            </li>
-                                            <li class="uppercase">
-                                                <a href="javascript:;">Fever</a>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="blog-comments">
-                                        <h3 class="sbold blog-comments-title">Comments(0)</h3>
+                                    <div class="blog-post-content">
+                                        <h2 class="blog-title blog-post-title">
+                                            <a href="javascript:;">Dengue Fever</a>
+                                        </h2>
+                                        <p class="blog-post-desc"> Dengue (pronounced DENgee) fever is a painful, debilitating mosquito-borne disease caused by any one of four closely related dengue viruses. These viruses are related to the viruses that cause West Nile infection and yellow fever.
+                                            An estimated 390 million dengue infections occur worldwide each year, with about 96 million resulting in illness</p>
+                                        <div class="blog-post-foot">
+                                            <ul class="blog-post-tags">
+                                                <li class="uppercase">
+                                                    <a href="javascript:;">Mosquito</a>
+                                                </li>
+                                                <li class="uppercase">
+                                                    <a href="javascript:;">Fever</a>
+                                                </li>
+                                                <li class="uppercase">
+                                                    <a href="javascript:;">Contagious</a>
+                                                </li>
+                                            </ul>
+                                            <div class="blog-post-meta">
+                                                <i class="icon-calendar font-blue"></i>
+                                                <a href="javascript:;">Oct 22, 2015</a>
+                                            </div>
+                                            <div class="blog-post-meta">
+                                                <i class="icon-bubble font-blue"></i>
+                                                <a href="javascript:;">8 Comments</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-lg-3">
-                                <div class="blog-single-sidebar bordered blog-container">
-                                    <div class="blog-single-sidebar-search">
-                                        <div class="input-icon right">
-                                            <i class="icon-magnifier"></i>
-                                            <input type="text" class="form-control" placeholder="Search Blog"> </div>
+                            <div class="col-lg-6">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="blog-quote bordered blog-container">
+                                            <div class="blog-quote-label bg-green-jungle">
+                                                <i class="fa fa-quote-left"></i>Anytime you interfere with a natural process, you're playing God. God determines what happens naturally. That means when a person's ill, he shouldn't go to a doctor because he's asking for interference with God's will. But of course, patients can't think that way.</div>
+                                            <div class="blog-quote-avatar">
+                                                <a href="javascript:;">
+                                                    <img src="../public/assets/pages/img/article/drj.jpg" />
+                                                </a>
+                                            </div>
+                                            <div class="blog-quote-author">
+                                                <h3 class="blog-title blog-quote-title">
+                                                    <a href="javascript:;">Dr Chen Suet Ching Jeanette</a>
+                                                </h3>
+                                                <p class="blog-quote-desc">Senior Cardiologist</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="blog-single-sidebar-recent">
-                                        <h3 class="blog-sidebar-title uppercase">Recent Posts</h3>
-                                        <ul>
-                                            <li>
-                                                <a href="javascript:;">Dengue Hotspots</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:;">Breast Cancer Awareness</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:;">Have you had your body checkup?</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:;">Blood donation drives</a>
-                                            </li>
-                                        </ul>
+                                    <div class="col-sm-6">
+                                        <div class="blog-quote bordered blog-container">
+                                            <div class="blog-quote-label bg-green-jungle">
+                                                <i class="fa fa-quote-left"></i>When we are sick, we want an uncommon doctor; when we have a construction job to do, we want an uncommon engineer, and when we are at war, we want an uncommon general. It is only when we get into politics that we are satisfied with the common man.</div>
+                                            <div class="blog-quote-avatar">
+                                                <a href="javascript:;">
+                                                    <img src="../public/assets/pages/img/article/drm.png" />
+                                                </a>
+                                            </div>
+                                            <div class="blog-quote-author">
+                                                <h3 class="blog-title blog-quote-title">
+                                                    <a href="javascript:;">Dr Fock Kwong Ming</a>
+                                                </h3>
+                                                <p class="blog-quote-desc">Senior Neurologist</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="blog-single-sidebar-tags">
-                                        <h3 class="blog-sidebar-title uppercase">Tags</h3>
-                                        <ul class="blog-post-tags">
-                                            <li class="uppercase">
-                                                <a href="javascript:;">Health</a>
-                                            </li>
-                                            <li class="uppercase">
-                                                <a href="javascript:;">Life</a>
-                                            </li>
-                                            <li class="uppercase">
-                                                <a href="javascript:;">Prevention</a>
-                                            </li>
-                                            <li class="uppercase">
-                                                <a href="javascript:;">Symptoms</a>
-                                            </li>
-                                            <li class="uppercase">
-                                                <a href="javascript:;">Cure</a>
-                                            </li>
-                                            <li class="uppercase">
-                                                <a href="javascript:;">MOH</a>
-                                            </li>
-                                            <li class="uppercase">
-                                                <a href="javascript:;">Discussion</a>
-                                            </li>
-                                            <li class="uppercase">
-                                                <a href="javascript:;">Information</a>
-                                            </li>
-                                        </ul>
+                                </div>
+                                <div class="row">
+                                    <div class="col-xs-12">
+                                        <div class="blog-banner blog-container" style="background-image:url(../public/assets/pages/img/article/ktph.jpg);">
+                                            <h2 class="blog-title blog-banner-title">
+                                                <a href="javascript:;">Khoo Teck Phuat Hospital</a>
+                                            </h2>
+                                        </div>
                                     </div>
-                                    <div class="blog-single-sidebar-links">
-                                        <h3 class="blog-sidebar-title uppercase">Useful Links</h3>
-                                        <ul>
-                                            <li>
-                                                <a href="javascript:;">Book appointment </a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:;">Submit Article</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:;">Clinic locations</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:;">Symptom checker</a>
-                                            </li>
-                                            <li>
-                                                <a href="javascript:;">Contacts</a>
-                                            </li>
-                                        </ul>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="blog-post-sm bordered blog-container">
+                                            <div class="blog-img-thumb">
+                                                <a href="javascript:;">
+                                                    <img src="../public/assets/pages/img/article/dhs.jpg" />
+                                                </a>
+                                            </div>
+                                            <div class="blog-post-content">
+                                                <h2 class="blog-title blog-post-title">
+                                                    <a href="javascript:;">Dengue Hotspots</a>
+                                                </h2>
+                                                <p class="blog-post-desc"> Latest update on the dengue hotspots </p>
+                                                <div class="blog-post-foot">
+                                                    <div class="blog-post-meta">
+                                                        <i class="icon-calendar font-blue"></i>
+                                                        <a href="javascript:;">Oct 24, 2015</a>
+                                                    </div>
+                                                    <div class="blog-post-meta">
+                                                        <i class="icon-bubble font-blue"></i>
+                                                        <a href="javascript:;">14 Comments</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
                                     </div>
-                                   
+                                    <div class="col-sm-6">
+                                        <div class="blog-post-sm bordered blog-container">
+                                            <div class="blog-img-thumb">
+                                                <a href="javascript:;">
+                                                    <img src="../public/assets/pages/img/article/bd.jpg" />
+                                                </a>
+                                            </div>
+                                            <div class="blog-post-content">
+                                                <h2 class="blog-title blog-post-title">
+                                                    <a href="javascript:;">Blood Donation</a>
+                                                </h2>
+                                                <p class="blog-post-desc"> Keen for the upcoming blood donation? </p>
+                                                <div class="blog-post-foot">
+                                                    <div class="blog-post-meta">
+                                                        <i class="icon-calendar font-blue"></i>
+                                                        <a href="javascript:;">Oct 24, 2015</a>
+                                                    </div>
+                                                    <div class="blog-post-meta">
+                                                        <i class="icon-bubble font-blue"></i>
+                                                        <a href="javascript:;">14 Comments</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <div class="blog-post-sm bordered blog-container">
+                                            <div class="blog-img-thumb">
+                                                <a href="javascript:;">
+                                                    <img src="../public/assets/pages/img/article/hc.jpg" />
+                                                </a>
+                                            </div>
+                                            <div class="blog-post-content">
+                                                <h2 class="blog-title blog-post-title">
+                                                    <a href="javascript:;">Health Check</a>
+                                                </h2>
+                                                <p class="blog-post-desc">Have you had your full body check up yet?</p>
+                                                <div class="blog-post-foot">
+                                                    <div class="blog-post-meta">
+                                                        <i class="icon-calendar font-blue"></i>
+                                                        <a href="javascript:;">Oct 24, 2015</a>
+                                                    </div>
+                                                    <div class="blog-post-meta">
+                                                        <i class="icon-bubble font-blue"></i>
+                                                        <a href="javascript:;">14 Comments</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div class="blog-post-sm bordered blog-container">
+                                            <div class="blog-img-thumb">
+                                                <a href="javascript:;">
+                                                    <img src="../public/assets/pages/img/article/bc.png" />
+                                                </a>
+                                            </div>
+                                            <div class="blog-post-content">
+                                                <h2 class="blog-title blog-post-title">
+                                                    <a href="javascript:;">Breast Cancer Awareness </a>
+                                                </h2>
+                                                <p class="blog-post-desc">Find out more about the pink ribbon campaign!</p>
+                                                <div class="blog-post-foot">
+                                                    <div class="blog-post-meta">
+                                                        <i class="icon-calendar font-blue"></i>
+                                                        <a href="javascript:;">Oct 24, 2015</a>
+                                                    </div>
+                                                    <div class="blog-post-meta">
+                                                        <i class="icon-bubble font-blue"></i>
+                                                        <a href="javascript:;">14 Comments</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
