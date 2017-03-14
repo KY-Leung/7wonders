@@ -19,6 +19,10 @@ namespace VirusBusters
 {
     public partial class symptom_checker_result : System.Web.UI.Page
     {
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+            if (Session["id"] != null) this.MasterPageFile = "~/admin.master";
+        }
 
         protected string test;
         protected void Page_Load(object sender, EventArgs e)
