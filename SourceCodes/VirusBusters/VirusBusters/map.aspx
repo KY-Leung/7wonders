@@ -1,4 +1,8 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="map.aspx.cs" Inherits="VirusBusters.map" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="map.aspx.cs" Inherits="VirusBusters.map" MasterPageFile="~/Site1.Master" %>
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
+</asp:Content>
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+</asp:Content>
 
 <!DOCTYPE html>
 
@@ -8,7 +12,7 @@
 
     <head>
         <meta charset="utf-8" />
-        <title>One-stop health Home </title>
+        <title>One-stop health Home</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta content="width=device-width, initial-scale=1" name="viewport" />
         <meta content="" name="description" />

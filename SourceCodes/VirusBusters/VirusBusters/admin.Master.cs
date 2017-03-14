@@ -7,10 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace VirusBusters
 {
-    public partial class appointment_history : System.Web.UI.Page
+    public partial class Site1 : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+
         }
     }
 }
