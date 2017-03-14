@@ -22,15 +22,13 @@ namespace VirusBusters
         protected String[] lngArray;
         protected String[] nameAr;
 
-      
-
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+            if (Session["id"] != null) this.MasterPageFile = "~/admin.master";
+        }
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["id"] == null) Response.Redirect("login.aspx");
-            usernameLabel.Text = Session["id"].ToString();
-            myLink.Attributes["href"] = "logout.aspx";
-
             SqlDataAdapter da = new SqlDataAdapter("Select * from clinic", ConfigurationManager.ConnectionStrings["myDB"].ConnectionString);
             DataSet ds = new DataSet();
             da.Fill(ds);

@@ -130,13 +130,7 @@
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="PageLevelPluginsScript" runat="server">
     <!-- PAGE LEVEL PLUGINS -->
-    <!-- TABLE-->
-    <script src="../public/assets/global/js/datatable.js" type="text/javascript"></script>
-    <script src="../public/assets/global/plugins/datatables/datatables.min.js" type="text/javascript"></script>
-    <script src="../public/assets/global/plugins/datatables/plugins/bootstrap/datatables.bootstrap.js" type="text/javascript"></script>
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="PageLevelScripts" runat="server">
     <!-- PAGE LEVEL SCRIPTS -->
-    <!-- TABLE-->
-    <script src="../public/assets/pages/js/table-datatables-colreorder.min.js" type="text/javascript"></script>
 </asp:Content>
