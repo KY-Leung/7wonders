@@ -140,6 +140,7 @@
     <Content Include="appointment_new.aspx" />
     <Content Include="article_details.aspx" />
     <Content Include="article_new.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="login.aspx" />
     <Content Include="logout.aspx" />
     <Content Include="map.aspx" />
@@ -155,6 +156,7 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="articles.aspx" />
@@ -203,6 +205,9 @@
     </Compile>
     <Compile Include="article_new.aspx.designer.cs">
       <DependentUpon>article_new.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>

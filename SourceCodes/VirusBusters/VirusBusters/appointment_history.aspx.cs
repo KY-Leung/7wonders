@@ -12,17 +12,16 @@ namespace VirusBusters
 
         protected void Page_PreInit(object sender, EventArgs e)
         {
-            if (Session["id"] != null)
+            bool isLoggedIn = (System.Web.HttpContext.Current.User != null) && System.Web.HttpContext.Current.User.Identity.IsAuthenticated;
+            if (isLoggedIn)
             {
-                string str = Session["isAdmin"].ToString();
-                if (str == "T")
+                if (string.Equals(HttpContext.Current.User.Identity.Name, "admin", StringComparison.CurrentCultureIgnoreCase)) //to be changed to role
                 {
                     this.MasterPageFile = "~/admin.master";
                 }
                 else
                 {
                     this.MasterPageFile = "~/public.master";
-                    Response.Redirect("noaccess.html");
                 }
             }
             else
@@ -33,7 +32,6 @@ namespace VirusBusters
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["id"] == null) Response.Redirect("login.aspx");
         }
     }
 }

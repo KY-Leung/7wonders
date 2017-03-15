@@ -5,174 +5,163 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="PageLevelPluginsLink" runat="server">
     <!-- PAGE LEVEL PLUGINS-->
+    <!-- WIZARD-->
+    <link href="../public/assets/global/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+    <link href="../public/assets/global/plugins/select2/css/select2-bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <!-- CALENDER-->
     <link href="../public/assets/global/plugins/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet" type="text/css" />
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="contentBody" runat="server"> 
-    <!-- CONTENT BODY-->
     <div class="row">
-        <div class="col-md-12">
-            <div class="portlet light bordered" id="form_wizard_1">
-                <div class="portlet-title">
-                    <div class="caption">
-                        <i class=" icon-layers font-red"></i>
-                        <span class="caption-subject font-red bold uppercase">
-                            Making Appointment -
-                            <span class="step-title"> Step 1 of 1 </span>
-                        </span>
-                    </div>
-                    <div class="actions">
-                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
-                            <i class="icon-cloud-upload"></i>
-                        </a>
-                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
-                            <i class="icon-wrench"></i>
-                        </a>
-                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
-                            <i class="icon-trash"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="portlet-body form">
-                    </div>
-                        <div class="form-wizard">
-                            <div class="form-body">
-                                <ul class="nav nav-pills nav-justified steps">
-                                    <li>
-                                        <a href="#tab1" data-toggle="tab" class="step">
-                                            <span class="number"> 1 </span>
-                                            <span class="desc">
-                                                <i class="fa fa-check"></i> Appointment Details
-                                            </span>
+                        <div class="col-md-12">
+                            <div class="portlet light bordered" id="form_wizard_1">
+                                <div class="portlet-title">
+                                    <div class="caption">
+                                        <i class=" icon-layers font-red"></i>
+                                        <span class="caption-subject font-red bold uppercase">
+                                            Making Appointment -
+                                            <span class="step-title"> Step 1 of 1 </span>
+                                        </span>
+                                    </div>
+                                    <div class="actions">
+                                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                                            <i class="icon-cloud-upload"></i>
                                         </a>
-                                    </li>
-                                </ul>
-                                <div id="bar" class="progress progress-striped" role="progressbar">
-                                    <div class="progress-bar progress-bar-success"> </div>
+                                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                                            <i class="icon-wrench"></i>
+                                        </a>
+                                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
+                                            <i class="icon-trash"></i>
+                                        </a>
+                                    </div>
                                 </div>
-                                <div class="tab-content">
-                                    <div class="alert alert-danger display-none">
-                                        <button class="close" data-dismiss="alert"></button> You have some form errors. Please check below.
+                                <div class="portlet-body form">
                                     </div>
-                                    <div class="alert alert-success display-none">
-                                        <button class="close" data-dismiss="alert"></button> Your form validation is successful!
-                                    </div>
-                                    <div class="tab-pane active" id="tab1">
-                                        <h3 class="block">Select your appointment details</h3>
-
-                                        <table>
-
-                                        <tr>
-                                            <td class="auto-style1">
-                                        <div class="form-group">
-                                            <label class="control-label col-md-3">
-                                                Date
-                                                <span class="required"> * </span>
-                                            </label>
-                                            <div class="col-md-3">
-                                                <div class="input-group input-medium date date-picker" data-date-format="yyyy/mm/dd">
+                                        <div class="form-wizard">
+                                            <div class="form-body">
+                                                <ul class="nav nav-pills nav-justified steps">
+                                                    <li>
+                                                        <a href="#tab1" data-toggle="tab" class="step">
+                                                            <span class="number"> 1 </span>
+                                                            <span class="desc">
+                                                                <i class="fa fa-check"></i> Appointment Details
+                                                            </span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                                <div id="bar" class="progress progress-striped" role="progressbar">
+                                                    <div class="progress-bar progress-bar-success"> </div>
+                                                </div>
+                                                <div class="tab-content">
+                                                    <div class="alert alert-danger display-none">
+                                                        <button class="close" data-dismiss="alert"></button> You have some form errors. Please check below.
+                                                    </div>
+                                                    <div class="alert alert-success display-none">
+                                                        <button class="close" data-dismiss="alert"></button> Your form validation is successful!
+                                                    </div>
+                                                    <div class="tab-pane active" id="tab1">
+                                                        <h3 class="block">Select your appointment details</h3>
+                                                       <table>
+                                                      <tr>
+                                                          <td class="auto-style1">
+                                                        <div class="form-group">
+                                                            <label class="control-label col-md-3">
+                                                               Date
+                                                                <span class="required"> * </span>
+                                                            </label>
+                                                            <div class="col-md-3">
+                                                                <div class="input-group input-medium date date-picker" data-date-format="yyyy/mm/dd">
                                                                     
-                                                    <asp:TextBox ID="DateBox" runat="server" class="form-control"  Enabled="true" OnTextChanged="DateBox_TextChanged"></asp:TextBox>
-
-                                                    <span class="input-group-btn">
-                                                        <button class="btn default" type="button" style="margin-right:29px">
-                                                            <i class="fa fa-calendar"></i>
-                                                        </button>
-                                                    </span>
-                                                </div>
-                                                <!-- /input-group -->
-                                            </div>
-                                        </div>
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>
-                                                    <br />
-                                                </td>
-
-                                            </tr>
-
-                                            <tr>
-                                            <td>
-                                                <div class="form-group">
-                                            <label class="control-label col-md-3">
-                                                Clinic
-                                                <span class="required"> * </span>
-                                            </label>
-                                            <div class="col-md-3">
-                                                <div>
-                                            <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="cN" DataValueField="cN"  AppendDataBoundItems="true" EnableViewState="True"></asp:DropDownList>
+                                                                    <asp:TextBox ID="DateBox" runat="server" class="form-control"  Enabled="true" OnTextChanged="DateBox_TextChanged"></asp:TextBox>
+                                                                    <span class="input-group-btn">
+                                                                        <button class="btn default" type="button" style="margin-right:29px">
+                                                                            <i class="fa fa-calendar"></i>
+                                                                        </button>
+                                                                    </span>
+                                                                </div>
+                                                                <!-- /input-group -->
+                                                            </div>
+                                                        </div>
+                                                              </td>
+                                                           </tr>
+                                                           <tr>
+                                                               <td>
+                                                                   <br />
+                                                               </td>
+                                                           </tr>
+                                                           <tr>
+                                                            <td>
+                                                              <div class="form-group">
+                                                            <label class="control-label col-md-3">
+                                                               Clinic
+                                                                <span class="required"> * </span>
+                                                            </label>
+                                                            <div class="col-md-3">
+                                                                <div>
+                                                            <asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource1" DataTextField="cN" DataValueField="cN"  AppendDataBoundItems="true" EnableViewState="True"></asp:DropDownList>
                                                                 
-                                                </div>
-                                                <!-- /input-group -->
-                                            </div>
-                                        </div>
-
-                                            </td>
-                                            </tr>
-
-                                                        <tr>
-                                                <td>
-                                                    <br />
-                                                </td>
-
-                                            </tr>
-
-                                                    <tr>
-                                            <td>
-                                                <div class="form-group">
-                                            <label class="control-label col-md-3">
-                                                Time
-                                                <span class="required"> * </span>
-                                            </label>
-                                            <div class="col-md-3">
-                                                <div>
-                                                    <asp:DropDownList ID="DropDownList2" runat="server">
-                                                        <asp:ListItem>0800</asp:ListItem>
-                                                        <asp:ListItem>0900</asp:ListItem>
-                                                        <asp:ListItem>1000</asp:ListItem>
-                                                        <asp:ListItem>1100</asp:ListItem>
-                                                        <asp:ListItem>1200</asp:ListItem>
-                                                        <asp:ListItem>1300</asp:ListItem>
-                                                        <asp:ListItem>1400</asp:ListItem>
-                                                        <asp:ListItem>1500</asp:ListItem>
-                                                        <asp:ListItem>1600</asp:ListItem>
-                                                        <asp:ListItem>1700</asp:ListItem>
-                                                        <asp:ListItem>1800</asp:ListItem>
-                                                        <asp:ListItem>1900</asp:ListItem>
-                                                        <asp:ListItem>2000</asp:ListItem>
-                                                        <asp:ListItem>2100</asp:ListItem>
-                                                    </asp:DropDownList>
-                                                </div>  <!-- /input-group -->
-                                            </div>
-                                        </div>
-
-                                            </td>
-                                            </tr>
-
-                                                <tr>
-                                                <td>
-                                                    <br />
-                                                </td>
-                                            </tr>
-
-                                            <tr>
-                                                <td>
-                                                    <asp:Button ID="Button1" runat="server" Text="Book" cssclass="btn green" OnClick="Button1_Click" OnClientClick="return confirm('Are you sure you want to make this appointment?');"/>
-                                                </td>
-                                            </tr>
-
-                            </table>
+                                                                </div>
+                                                                <!-- /input-group -->
+                                                            </div>
+                                                        </div>
+                                                            </td>
+                                                           </tr>
+                                                                       <tr>
+                                                               <td>
+                                                                   <br />
+                                                               </td>
+                                                           </tr>
+                                                                 <tr>
+                                                            <td>
+                                                              <div class="form-group">
+                                                            <label class="control-label col-md-3">
+                                                               Time
+                                                                <span class="required"> * </span>
+                                                            </label>
+                                                            <div class="col-md-3">
+                                                                <div>
+                                                                 <asp:DropDownList ID="DropDownList2" runat="server">
+                                                                     <asp:ListItem>0800</asp:ListItem>
+                                                                     <asp:ListItem>0900</asp:ListItem>
+                                                                     <asp:ListItem>1000</asp:ListItem>
+                                                                     <asp:ListItem>1100</asp:ListItem>
+                                                                     <asp:ListItem>1200</asp:ListItem>
+                                                                     <asp:ListItem>1300</asp:ListItem>
+                                                                     <asp:ListItem>1400</asp:ListItem>
+                                                                     <asp:ListItem>1500</asp:ListItem>
+                                                                     <asp:ListItem>1600</asp:ListItem>
+                                                                     <asp:ListItem>1700</asp:ListItem>
+                                                                     <asp:ListItem>1800</asp:ListItem>
+                                                                     <asp:ListItem>1900</asp:ListItem>
+                                                                     <asp:ListItem>2000</asp:ListItem>
+                                                                     <asp:ListItem>2100</asp:ListItem>
+                                                                    </asp:DropDownList>
+                                                                </div>  <!-- /input-group -->
+                                                            </div>
+                                                        </div>
+                                                            </td>
+                                                           </tr>
+                                                             <tr>
+                                                               <td>
+                                                                   <br />
+                                                               </td>
+                                                           </tr>
+                                                           <tr>
+                                                               <td>
+                                                                   <asp:Button ID="Button1" runat="server" Text="Book" cssclass="btn green" OnClick="Button1_Click" OnClientClick="return confirm('Are you sure you want to make this appointment?');"/>
+                                                               </td>
+                                                           </tr>
+                                            </table>
                                                
+                                                </div>
+                                            </div>
+                                      
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                                      
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
- </asp:Content>
+</asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="PageLevelPluginsScript" runat="server">
     <!-- PAGE LEVEL PLUGINS)-->
     <!-- WIZARD-->
