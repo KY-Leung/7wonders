@@ -45,6 +45,41 @@ namespace VirusBusters
 
         protected void Button1_Click(object sender, EventArgs e)
         {
+            string connectionString = ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
+            SqlConnection con = new SqlConnection(connectionString);
+            string content = art_content.Value.ToString();
+            if (content != "")
+            {
+                if (img_up.HasFile)
+                {
+                    string fileext = System.IO.Path.GetExtension(this.img_up.PostedFile.FileName);
+                    string upfilename = DateTime.Now.ToString("yyyyMMddHHmmss").ToString() + fileext;
+                    img_up.PostedFile.SaveAs(Server.MapPath("~/Article_Img/") + upfilename);
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("insert into article(userid,content,image_upload,isApproved) values('" + Session["id"].ToString() + "','" + content + "','" + upfilename + "','N')", con);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    msgLbl.Visible = true;
+                    msgLbl.Text = "Article Has been submitted for vetting.. redirecting to article page..";
+                    con.Close();
+                }
+                else
+                {
+                    SqlCommand cmd = new SqlCommand("insert into article(userid,content,isApproved) values('" + Session["id"].ToString() + "','" + content + "',','N')", con);
+                    cmd.ExecuteNonQuery();
+                    con.Close();
+                    msgLbl.Visible = true;
+                    msgLbl.Text = "Article Has been submitted for vetting.. redirecting to article page..";
+                    con.Close();
+
+                }
+                Response.AddHeader("REFRESH", "2;URL=articles.aspx");
+            }
+            else
+            {
+                errorMsg.Text = "Please type in your articel content!";
+                errorMsg.Visible = true;
+            }
         }
     }
 }

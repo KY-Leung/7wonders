@@ -12,7 +12,9 @@
     <!-- CONTENT BODY-->
     <form id="form1" runat="server">
         <div class="m-heading-1 border-green m-bordered">
-            <h3>Create New Article</h3>
+            <h3>Create New Article
+                <asp:Label ID="msgLbl" runat="server" Text="" Visible="false" ForeColor="Red"></asp:Label>
+            </h3>
             <p>Medical staff will create new articles here.</p>
                 <p><u>  General rules to follow : </u></p>
                 <p>  1. No profanities allowed. </p>
@@ -61,7 +63,7 @@
                                         <span class="btn default btn-file">
                                             <span class="fileinput-new"> Select image </span>
                                             <span class="fileinput-exists"> Change </span>
-                                            <input type="file" name="..."> </span>
+                                            <asp:FileUpload ID="img_up" runat="server" /></span>
                                         <a href="javascript:;" class="btn red fileinput-exists" data-dismiss="fileinput"> Remove </a>
                                     </div>
                                 </div>
@@ -71,6 +73,8 @@
                             <div class="row">
                                 <div class="col-md-offset-3 col-md-9">
                                 <asp:Button ID="Button1" runat="server" Text="Submit" onclick="Button1_Click" cssclass="btn green"/>
+                                <br />
+                                <asp:Label ID="errorMsg" runat="server" Text="" Visible="false" ForeColor="Red"></asp:Label>
                                 </div>
                             </div>
                         </div>
