@@ -11,6 +11,27 @@ namespace VirusBusters
 {
     public partial class appointment_new : System.Web.UI.Page
     {
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+            if (Session["id"] != null)
+            {
+                string str = Session["isAdmin"].ToString();
+                if (str == "T")
+                {
+                    this.MasterPageFile = "~/admin.master";
+                }
+                else
+                {
+                    this.MasterPageFile = "~/public.master";
+                    Response.Redirect("noaccess.html");
+                }
+            }
+            else
+            {
+                Response.Redirect("login.aspx");
+            }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)

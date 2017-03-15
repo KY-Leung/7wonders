@@ -20,7 +20,14 @@ namespace VirusBusters
     {
         protected void Page_PreInit(object sender, EventArgs e)
         {
-            if (Session["id"] != null) this.MasterPageFile = "~/admin.master";
+            if (Session["id"] != null)
+            {
+                string str = Session["isAdmin"].ToString();
+                if (str == "T")
+                {
+                    this.MasterPageFile = "~/admin.master";
+                }
+            }
         }
 
         protected void Page_Load(object sender, EventArgs e)

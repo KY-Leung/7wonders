@@ -11,7 +11,7 @@ namespace VirusBusters
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            myLink.Attributes["href"] = "logout.aspx";
+            if (Session["id"] != null) usernameLabel.Text = Session["id"].ToString();
         }
     }
 }
