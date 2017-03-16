@@ -11,12 +11,28 @@ namespace VirusBusters
 {
     public partial class appointment_new : System.Web.UI.Page
     {
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+            bool isLoggedIn = (System.Web.HttpContext.Current.User != null) && System.Web.HttpContext.Current.User.Identity.IsAuthenticated;
+            if (isLoggedIn)
+            {
+                if (string.Equals(HttpContext.Current.User.Identity.Name, "admin", StringComparison.CurrentCultureIgnoreCase)) //to be changed to role
+                {
+                    this.MasterPageFile = "~/admin.master";
+                }
+                else
+                {
+                    this.MasterPageFile = "~/public.master";
+                }
+            }
+            else
+            {
+                Response.Redirect("login.aspx");
+            }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["id"] == null) Response.Redirect("login.aspx");
-            usernameLabel.Text = Session["id"].ToString();
-            myLink.Attributes["href"] = "logout.aspx";
-
             if (!Page.IsPostBack)
             {
                 string name = Request.Form["name"];

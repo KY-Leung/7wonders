@@ -18,11 +18,29 @@ namespace VirusBusters
 {
     public partial class article_new : System.Web.UI.Page
     {
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+            bool isLoggedIn = (System.Web.HttpContext.Current.User != null) && System.Web.HttpContext.Current.User.Identity.IsAuthenticated;
+            if (isLoggedIn)
+            {
+                if (string.Equals(HttpContext.Current.User.Identity.Name, "admin", StringComparison.CurrentCultureIgnoreCase)) //to be changed to role
+                {
+                    this.MasterPageFile = "~/admin.master";
+                }
+                else
+                {
+                    this.MasterPageFile = "~/public.master";
+                    Response.Redirect("noaccess.html");
+                }
+            }
+            else
+            {
+                Response.Redirect("login.aspx");
+            }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["id"] == null) Response.Redirect("login.aspx");
-            usernameLabel.Text = Session["id"].ToString();
-            myLink.Attributes["href"] = "logout.aspx";
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -38,7 +56,7 @@ namespace VirusBusters
                     string upfilename = DateTime.Now.ToString("yyyyMMddHHmmss").ToString() + fileext;
                     img_up.PostedFile.SaveAs(Server.MapPath("~/Article_Img/") + upfilename);
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("insert into article(userid,content,image_upload,isApproved) values('" + Session["id"].ToString() + "','" + content + "','" + upfilename + "','N')", con);
+                    SqlCommand cmd = new SqlCommand("insert into article(userid,content,image_upload,isApproved) values('" + HttpContext.Current.User.Identity.Name + "','" + content + "','" + upfilename + "','N')", con);
                     cmd.ExecuteNonQuery();
                     con.Close();
                     msgLbl.Visible = true;
@@ -47,7 +65,7 @@ namespace VirusBusters
                 }
                 else
                 {
-                    SqlCommand cmd = new SqlCommand("insert into article(userid,content,isApproved) values('" + Session["id"].ToString() + "','" + content + "',','N')", con);
+                    SqlCommand cmd = new SqlCommand("insert into article(userid,content,isApproved) values('" + HttpContext.Current.User.Identity.Name + "','" + content + "','N')", con);
                     cmd.ExecuteNonQuery();
                     con.Close();
                     msgLbl.Visible = true;
@@ -62,9 +80,6 @@ namespace VirusBusters
                 errorMsg.Text = "Please type in your articel content!";
                 errorMsg.Visible = true;
             }
-           
-
-        }
-        
         }
     }
+}

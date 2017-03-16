@@ -138,9 +138,9 @@
     <Content Include="appointment_history.aspx" />
     <Content Include="appointment_manage.aspx" />
     <Content Include="appointment_new.aspx" />
-    <Content Include="article.aspx" />
     <Content Include="article_details.aspx" />
     <Content Include="article_new.aspx" />
+    <Content Include="Global.asax" />
     <Content Include="login.aspx" />
     <Content Include="logout.aspx" />
     <Content Include="map.aspx" />
@@ -148,12 +148,15 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="admin.Master" />
+    <Content Include="public.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="articles.aspx" />
@@ -189,13 +192,6 @@
     <Compile Include="appointment_new.aspx.designer.cs">
       <DependentUpon>appointment_new.aspx</DependentUpon>
     </Compile>
-    <Compile Include="article.aspx.cs">
-      <DependentUpon>article.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="article.aspx.designer.cs">
-      <DependentUpon>article.aspx</DependentUpon>
-    </Compile>
     <Compile Include="article_details.aspx.cs">
       <DependentUpon>article_details.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -209,6 +205,9 @@
     </Compile>
     <Compile Include="article_new.aspx.designer.cs">
       <DependentUpon>article_new.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="login.aspx.cs">
       <DependentUpon>login.aspx</DependentUpon>
@@ -245,6 +244,20 @@
     </Compile>
     <Compile Include="default.aspx.designer.cs">
       <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin.Master.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin.Master.designer.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="public.Master.cs">
+      <DependentUpon>public.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="public.Master.designer.cs">
+      <DependentUpon>public.Master</DependentUpon>
     </Compile>
     <Compile Include="symptom_checker.aspx.cs">
       <DependentUpon>symptom_checker.aspx</DependentUpon>
