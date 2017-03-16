@@ -56,7 +56,7 @@ namespace VirusBusters
                     string upfilename = DateTime.Now.ToString("yyyyMMddHHmmss").ToString() + fileext;
                     img_up.PostedFile.SaveAs(Server.MapPath("~/Article_Img/") + upfilename);
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("insert into article(userid,content,image_upload,isApproved) values('" + Session["id"].ToString() + "','" + content + "','" + upfilename + "','N')", con);
+                    SqlCommand cmd = new SqlCommand("insert into article(userid,content,image_upload,isApproved) values('" + HttpContext.Current.User.Identity.Name + "','" + content + "','" + upfilename + "','N')", con);
                     cmd.ExecuteNonQuery();
                     con.Close();
                     msgLbl.Visible = true;
@@ -65,7 +65,7 @@ namespace VirusBusters
                 }
                 else
                 {
-                    SqlCommand cmd = new SqlCommand("insert into article(userid,content,isApproved) values('" + Session["id"].ToString() + "','" + content + "',','N')", con);
+                    SqlCommand cmd = new SqlCommand("insert into article(userid,content,isApproved) values('" + HttpContext.Current.User.Identity.Name + "','" + content + "','N')", con);
                     cmd.ExecuteNonQuery();
                     con.Close();
                     msgLbl.Visible = true;

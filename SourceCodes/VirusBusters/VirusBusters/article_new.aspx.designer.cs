@@ -7,31 +7,20 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace VirusBusters
-{
-
-
-    public partial class article_new
-    {
-
+namespace VirusBusters {
+    
+    
+    public partial class article_new {
+        
         /// <summary>
-        /// usernameLabel control.
+        /// form1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label usernameLabel;
-
-        /// <summary>
-        /// myLink control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor myLink;
-
+        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
+        
         /// <summary>
         /// msgLbl control.
         /// </summary>
@@ -40,16 +29,7 @@ namespace VirusBusters
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label msgLbl;
-
-        /// <summary>
-        /// form_sample_3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form_sample_3;
-
+        
         /// <summary>
         /// art_content control.
         /// </summary>
@@ -58,7 +38,7 @@ namespace VirusBusters
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlTextArea art_content;
-
+        
         /// <summary>
         /// img_up control.
         /// </summary>
@@ -67,7 +47,7 @@ namespace VirusBusters
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload img_up;
-
+        
         /// <summary>
         /// Button1 control.
         /// </summary>
@@ -76,7 +56,7 @@ namespace VirusBusters
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button Button1;
-
+        
         /// <summary>
         /// errorMsg control.
         /// </summary>
