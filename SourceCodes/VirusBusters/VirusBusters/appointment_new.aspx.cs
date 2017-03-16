@@ -40,13 +40,13 @@ namespace VirusBusters
 
                 DropDownList1.SelectedValue = name;
             }
-            
+
             Label2.Text = "1"; // put user session ID here
             string query = "SELECT MAX(Id) FROM appointment ";
             int rows = Convert.ToInt32(RunCommand(query)) + 1;
             Label1.Text = rows.ToString();
-          
-            
+
+
         }
 
         public string RunCommand(string Query)
@@ -69,6 +69,6 @@ namespace VirusBusters
             Response.Redirect("appointment_manage.aspx");
         }
 
-     
+
     }
 }
