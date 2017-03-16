@@ -20,127 +20,128 @@
     <script src="../public/assets/global/js/firebase.js" type="text/javascript"></script>
     <!-- GOOGLE API SCRIPTS-->
     <script src="../public/assets/pages/js/gmaps.js" type="text/javascript"></script>
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAArJGqoe1GzQMVSGBOxYgB-1QkO6wDvAI"></script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCVvjS9VaVAhibjtKTzvsduBdqCCS7aOGg"></script>
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="PageLevelScripts" runat="server">
     <!-- PAGE LEVEL SCRIPTS-->
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="Others" runat="server">
-    <script type="text/javascript" >
-        $('#Name').hide();
+    <form id="form1" runat="server">
+        <script type="text/javascript" >
+            $('#Name').hide();
 
-        var userLocationIcon = 'images/bluecircle.png'
+            var userLocationIcon = 'images/bluecircle.png'
 
-        var map;
-        $(document).ready(function () {
+            var map;
+            $(document).ready(function () {
                    
-            map = new GMaps({
-                div: '#map',
-                lat: <%=lat%>,
-                lng: <%=lng%>,
-                zoom: 12,
+                map = new GMaps({
+                    div: '#map',
+                    lat: <%=lat%>,
+                    lng: <%=lng%>,
+                    zoom: 12,
                       
-            });
+                });
 
-            GMaps.geolocate({
-                success: function (position) {
-                    map.setCenter(position.coords.latitude, position.coords.longitude);
-                    map.addMarker({
-                        lat: position.coords.latitude,
-                        lng: position.coords.longitude,
-                        icon: userLocationIcon,
-                        zoom: 16,
-                        title: "Current Location",
-                        infoWindow: {
-                            content: "You are here."
-                        }
-                    });
-                },
-                error: function (error) {
-                    alert('Geolocation failed: ' + error.message);
-                },
-                not_supported: function () {
-                    alert("Your browser does not support geolocation");
-                },
-                     
-            });
-
-            map.addControl({
-                position: 'top_right',
-                content: 'Show current location',
-                style: {
-                    margin: '5px',
-                    padding: '1px 6px',
-                    border: 'solid 1px #717B87',
-                    background: '#fff'
-                },
-                events: {
-                    click: function() {
-                        GMaps.geolocate({
-                            success: function(position) {
-                                map.setCenter(position.coords.latitude, position.coords.longitude);
-                            },
-                            error: function(error) {
-                                alert('Geolocation failed: ' + error.message);
-                            },
-                            not_supported: function() {
-                                alert("Your browser does not support geolocation");
+                GMaps.geolocate({
+                    success: function (position) {
+                        map.setCenter(position.coords.latitude, position.coords.longitude);
+                        map.addMarker({
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude,
+                            icon: userLocationIcon,
+                            zoom: 16,
+                            title: "Current Location",
+                            infoWindow: {
+                                content: "You are here."
                             }
                         });
+                    },
+                    error: function (error) {
+                        alert('Geolocation failed: ' + error.message);
+                    },
+                    not_supported: function () {
+                        alert("Your browser does not support geolocation");
+                    },
+                     
+                });
+
+                map.addControl({
+                    position: 'top_right',
+                    content: 'Show current location',
+                    style: {
+                        margin: '5px',
+                        padding: '1px 6px',
+                        border: 'solid 1px #717B87',
+                        background: '#fff'
+                    },
+                    events: {
+                        click: function() {
+                            GMaps.geolocate({
+                                success: function(position) {
+                                    map.setCenter(position.coords.latitude, position.coords.longitude);
+                                },
+                                error: function(error) {
+                                    alert('Geolocation failed: ' + error.message);
+                                },
+                                not_supported: function() {
+                                    alert("Your browser does not support geolocation");
+                                }
+                            });
+                        }
                     }
-                }
-            });
+                });
 
-            var i;
+                var i;
                   
-            var temp = "haha";
+                var temp = "haha";
                  
-            for(i=0 ; i<<%=count%> ; i++)
-                {
-                map.addMarker({                   
-                lat: latArray[i],
-                lng: lngArray[i],
-                title: nameAr[i],
-                infoWindow: {
-                    content: '<p>' + nameAr[i] + '</p>' + '<form method="POST" action="appointment_new.aspx"> <input type="hidden" id="name" name="Name" value = "'+  nameAr[i] + '"> <input type="submit" value="Book Appointment" /></form>'
-                }
-            });
-                }
+                for(i=0 ; i<<%=count%> ; i++)
+                    {
+                    map.addMarker({                   
+                    lat: latArray[i],
+                    lng: lngArray[i],
+                    title: nameAr[i],
+                    infoWindow: {
+                        content: '<p>' + nameAr[i] + '</p>' + '<form method="POST" action="appointment_new.aspx"> <input type="hidden" id="name" name="Name" value = "'+  nameAr[i] + '"> <input type="submit" value="Book Appointment" /></form>'
+                    }
+                });
+                    }
 
-        });
+            });
 
               
-        function post(name)
-        {
-            alert(name);
-            // PageMethods.test(name);
+            function post(name)
+            {
+                alert(name);
+                // PageMethods.test(name);
 
                   
-        }
+            }
       
-        function locate()
-        {
-                  
-            GMaps.geolocate({
-                success: function (position) {
-                    map.setCenter(position.coords.latitude, position.coords.longitude);
-                    map.addMarker({
-                        lat: position.coords.latitude,
-                        lng: position.coords.longitude,
-                        icon: userLocationIcon,
-                        title: "Current Location",
-                        infoWindow: {
-                            content: "You are here."
-                        }
-                    });
-                },
-                error: function (error) {
-                    alert('Geolocation failed: ' + error.message);
-                },
-                not_supported: function () {
-                    alert("Your browser does not support geolocation");
-                }
-            });
-        }
-    </script>
+            function locate()
+            {
+                GMaps.geolocate({
+                    success: function (position) {
+                        map.setCenter(position.coords.latitude, position.coords.longitude);
+                        map.addMarker({
+                            lat: position.coords.latitude,
+                            lng: position.coords.longitude,
+                            icon: userLocationIcon,
+                            title: "Current Location",
+                            infoWindow: {
+                                content: "You are here."
+                            }
+                        });
+                    },
+                    error: function (error) {
+                        alert('Geolocation failed: ' + error.message);
+                    },
+                    not_supported: function () {
+                        alert("Your browser does not support geolocation");
+                    }
+                });
+            }
+        </script>
+    </form>
 </asp:Content>
