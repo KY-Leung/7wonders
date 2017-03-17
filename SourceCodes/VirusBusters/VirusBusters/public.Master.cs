@@ -11,7 +11,15 @@ namespace VirusBusters
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //usernameLabel.Text = HttpContext.Current.User.Identity.Name;
+            LoginView LoginView1 = Page.Master.FindControl("LoginView1") as LoginView;
+            if (LoginView1 != null)
+            {
+                Label usernameLabel = LoginView1.FindControl("usernameLabel") as Label;
+                if (usernameLabel != null)
+                {
+                    usernameLabel.Text = "Welcome, " + HttpContext.Current.User.Identity.Name;
+                }
+            }
         }
     }
 }
