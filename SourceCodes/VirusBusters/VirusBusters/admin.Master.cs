@@ -11,7 +11,7 @@ namespace VirusBusters
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["id"] != null) usernameLabel.Text = Session["id"].ToString();
+            usernameLabel.Text = "Welcome, " + HttpContext.Current.User.Identity.Name;
         }
     }
 }

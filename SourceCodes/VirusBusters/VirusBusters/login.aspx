@@ -46,7 +46,7 @@
                 </div>
                 <div class="col-md-6 login-container bs-reset">
                     <div class="login-content">
-                        <h1>VirusBusters Login</h1>
+                        <h1>SingPass Login</h1>
                         <p>Please enter your credentials to access the system.</p>
                         <form id="form1" runat="server">
                             <asp:Label ID="Label1" runat="server"></asp:Label>
@@ -78,13 +78,7 @@
                         <!-- BEGIN FORGOT PASSWORD FORM -->
                         <form class="forget-form" action="javascript:;" method="post">
                             <h3 class="font-green">Forgot Password ?</h3>
-                            <p> Enter your e-mail address below to reset your password. </p>
-                            <div class="form-group">
-                                <input class="form-control placeholder-no-fix form-group" type="text" autocomplete="off" placeholder="Email" name="email" /> </div>
-                            <div class="form-actions">
-                                <button type="button" id="back-btn" class="btn green btn-outline">Back</button>
-                                <button type="submit" class="btn btn-success uppercase pull-right">Submit</button>
-                            </div>
+                            <p> Enter <a href="https://www.singpass.gov.sg/singpass/requestOnlineReset/requestOnlineResetTermsCheck">SingPass.gov.sg</a> to reset your password. </p>
                         </form>
                         <!-- END FORGOT PASSWORD FORM -->
                     </div>
