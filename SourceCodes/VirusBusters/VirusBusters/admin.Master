@@ -164,11 +164,24 @@
                             </li>
                         </ul>
                     </li>
-                    <li class="nav-item  ">
-                        <a href="symptom_checker.aspx" class="nav-link nav-toggle">
-                            <i class="icon-calendar"></i>
+                    <li class="nav-item">
+                        <a href="javascript:;" class="nav-link nav-toggle">
+                            <i class="icon-call-end"></i>
                             <span class="title">Symptom Checker</span>
+                            <span class="arrow"></span>
                         </a>
+                        <ul class="sub-menu">
+                            <li class="nav-item">
+                                <a href="symptom_checker.aspx" class="nav-link ">
+                                    <span class="title">Checker</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="symptom_checker_manage.aspx" class="nav-link ">
+                                    <span class="title">Manage</span>
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
                 <!-- END SIDEBAR MENU -->
