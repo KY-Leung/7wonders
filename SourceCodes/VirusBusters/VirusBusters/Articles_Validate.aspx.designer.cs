@@ -10,15 +10,15 @@
 namespace VirusBusters {
     
     
-    public partial class articles {
+    public partial class Articles_Validate {
         
         /// <summary>
-        /// articlesContainer control.
+        /// ArticlesContainer control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder articlesContainer;
+        protected global::System.Web.UI.WebControls.PlaceHolder ArticlesContainer;
     }
 }

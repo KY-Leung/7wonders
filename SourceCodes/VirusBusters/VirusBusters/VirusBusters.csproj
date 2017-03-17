@@ -138,6 +138,8 @@
     <Content Include="appointment_history.aspx" />
     <Content Include="appointment_manage.aspx" />
     <Content Include="appointment_new.aspx" />
+    <Content Include="ArticleDetailsValidate.aspx" />
+    <Content Include="Articles_Validate.aspx" />
     <Content Include="article_details.aspx" />
     <Content Include="article_new.aspx" />
     <Content Include="Global.asax" />
@@ -191,6 +193,20 @@
     </Compile>
     <Compile Include="appointment_new.aspx.designer.cs">
       <DependentUpon>appointment_new.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ArticleDetailsValidate.aspx.cs">
+      <DependentUpon>ArticleDetailsValidate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ArticleDetailsValidate.aspx.designer.cs">
+      <DependentUpon>ArticleDetailsValidate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Articles_Validate.aspx.cs">
+      <DependentUpon>Articles_Validate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Articles_Validate.aspx.designer.cs">
+      <DependentUpon>Articles_Validate.aspx</DependentUpon>
     </Compile>
     <Compile Include="article_details.aspx.cs">
       <DependentUpon>article_details.aspx</DependentUpon>

@@ -39,7 +39,14 @@
                                 <button class="close" data-close="alert"></button> You have some form errors. Please check below. </div>
                             <div class="alert alert-success display-hide">
                                 <button class="close" data-close="alert"></button> Your form validation is successful! </div>
-                            <div class="form-group">
+                           
+                       <div class="form-group">
+                            <label class="control-label col-md-3">Title</label>
+                            <div class="col-md-9">
+                            <asp:TextBox ID="TitleTB" runat="server"></asp:TextBox> </div>
+                        </div>
+
+                             <div class="form-group">
                                 <label class="control-label col-md-3">Content</label>
                                 <div class="col-md-9">
                                     <textarea name="markdown" data-provide="markdown" rows="10" data-error-container="#editor_error" runat="server" id="art_content"></textarea>
@@ -47,11 +54,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label class="control-label col-md-3">Tags</label>
-                            <div class="col-md-9">
-                            <input type="text" value="Singapore,Lung Cancer,SGH,Male" data-role="tagsinput"> </div>
-                        </div>
+                       
                         <div class="form-group last">
                             <label class="control-label col-md-3">Image Upload</label>
                             <div class="col-md-9">
@@ -72,7 +75,7 @@
                         <div class="form-actions">
                             <div class="row">
                                 <div class="col-md-offset-3 col-md-9">
-                                <asp:Button ID="Button1" runat="server" Text="Submit" onclick="Button1_Click" cssclass="btn green"/>
+                                <asp:Button ID="Button1" runat="server" Text="Submit" onclick="Submit_Click" cssclass="btn green"/>
                                 <br />
                                 <asp:Label ID="errorMsg" runat="server" Text="" Visible="false" ForeColor="Red"></asp:Label>
                                 </div>

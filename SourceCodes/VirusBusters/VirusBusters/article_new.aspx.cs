@@ -43,11 +43,13 @@ namespace VirusBusters
         {
         }
 
-        protected void Button1_Click(object sender, EventArgs e)
+        protected void Submit_Click(object sender, EventArgs e)
         {
             string connectionString = ConfigurationManager.ConnectionStrings["myDB"].ConnectionString;
             SqlConnection con = new SqlConnection(connectionString);
             string content = art_content.Value.ToString();
+            string title = TitleTB.Text;
+            string datetimenow = DateTime.Today.ToString("D");
             if (content != "")
             {
                 if (img_up.HasFile)
@@ -56,18 +58,17 @@ namespace VirusBusters
                     string upfilename = DateTime.Now.ToString("yyyyMMddHHmmss").ToString() + fileext;
                     img_up.PostedFile.SaveAs(Server.MapPath("~/Article_Img/") + upfilename);
                     con.Open();
-                    SqlCommand cmd = new SqlCommand("insert into article(userid,content,image_upload,isApproved) values('" + HttpContext.Current.User.Identity.Name + "','" + content + "','" + upfilename + "','N')", con);
+                    SqlCommand cmd = new SqlCommand("insert into article(userid,content,image_upload,isApproved,Title,Dateup) values('" + HttpContext.Current.User.Identity.Name + "','" + content + "','" + upfilename + "','N','" + title + "','" + datetimenow + "'" + ")", con);
                     cmd.ExecuteNonQuery();
-                    con.Close();
                     msgLbl.Visible = true;
                     msgLbl.Text = "Article Has been submitted for vetting.. redirecting to article page..";
                     con.Close();
                 }
                 else
                 {
-                    SqlCommand cmd = new SqlCommand("insert into article(userid,content,isApproved) values('" + HttpContext.Current.User.Identity.Name + "','" + content + "','N')", con);
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("insert into article(userid,content,isApproved,Title,Dateup) values('" + HttpContext.Current.User.Identity.Name + "','" + content + "','N','" + title + "','" + datetimenow + "'" + ")", con);
                     cmd.ExecuteNonQuery();
-                    con.Close();
                     msgLbl.Visible = true;
                     msgLbl.Text = "Article Has been submitted for vetting.. redirecting to article page..";
                     con.Close();

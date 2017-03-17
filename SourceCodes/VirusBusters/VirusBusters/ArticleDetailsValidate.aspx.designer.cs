@@ -10,7 +10,7 @@
 namespace VirusBusters {
     
     
-    public partial class article_details {
+    public partial class ArticleDetailsValidate {
         
         /// <summary>
         /// form1 control.
@@ -29,6 +29,15 @@ namespace VirusBusters {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl ArticleTitle;
+        
+        /// <summary>
+        /// msglbl control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label msglbl;
         
         /// <summary>
         /// ArticleDate control.
@@ -58,39 +67,12 @@ namespace VirusBusters {
         protected global::System.Web.UI.HtmlControls.HtmlGenericControl ArticleDesc;
         
         /// <summary>
-        /// CommentConatiner control.
+        /// Approve control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.PlaceHolder CommentConatiner;
-        
-        /// <summary>
-        /// nameTB control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlInputText nameTB;
-        
-        /// <summary>
-        /// msgTB control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlTextArea msgTB;
-        
-        /// <summary>
-        /// submit_btn control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button submit_btn;
+        protected global::System.Web.UI.WebControls.Button Approve;
     }
 }
