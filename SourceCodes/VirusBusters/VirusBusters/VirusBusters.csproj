@@ -145,6 +145,7 @@
     <Content Include="Global.asax" />
     <Content Include="login.aspx" />
     <Content Include="logout.aspx" />
+    <Content Include="Manage_Illness_Predictor.aspx" />
     <Content Include="map.aspx" />
     <Content Include="packages.config" />
     <Content Include="ApplicationInsights.config">
@@ -245,6 +246,13 @@
     </Compile>
     <Compile Include="logout.aspx.designer.cs">
       <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Manage_Illness_Predictor.aspx.cs">
+      <DependentUpon>Manage_Illness_Predictor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Manage_Illness_Predictor.aspx.designer.cs">
+      <DependentUpon>Manage_Illness_Predictor.aspx</DependentUpon>
     </Compile>
     <Compile Include="map.aspx.cs">
       <DependentUpon>map.aspx</DependentUpon>

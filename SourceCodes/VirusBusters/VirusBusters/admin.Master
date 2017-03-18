@@ -177,7 +177,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="symptom_checker_manage.aspx" class="nav-link ">
+                                <a href="Manage_Illness_Predictor.aspx" class="nav-link ">
                                     <span class="title">Manage</span>
                                 </a>
                             </li>

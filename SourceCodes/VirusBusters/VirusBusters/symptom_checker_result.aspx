@@ -33,14 +33,21 @@
                     </div>
                 </div>
                 <div class="portlet-body">
+
+                    <asp:PlaceHolder ID="resulttableContainer" runat="server">
+
+                    </asp:PlaceHolder>
+
                     <script src="https://code.highcharts.com/highcharts.js"></script>
                     <script src="https://code.highcharts.com/modules/exporting.js"></script>
                     <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
                     <p> More information about the disease can be found  <a href= "https://www.moh.gov.sg/content/moh_web/home/diseases_and_conditions/h/hfmd.html" target="_blank">HERE</a> </p>
+
                 </div>
                 <a href="symptom_checker.aspx"  class="btn default button-previous">
                     <i class="fa fa-angle-left"></i> Back to Choose Symptom(s)
                 </a>
+
             </div>
             <!-- END CHART PORTLET-->
         </div>
@@ -64,7 +71,6 @@
     <script type="text/javascript">
 
      
-    var symptoms = "<%=test%>";
    
 
     if (symptoms == "fever"){
