@@ -10,7 +10,7 @@
 namespace VirusBusters {
     
     
-    public partial class Site3 {
+    public partial class Site2 {
         
         /// <summary>
         /// title control.
@@ -47,15 +47,24 @@ namespace VirusBusters {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlLink style_color;
-        
+
         /// <summary>
-        /// LoginView1 control.
+        /// usernameLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LoginView LoginView1;
+        protected global::System.Web.UI.WebControls.Label usernameLabel;
+
+        /// <summary>
+        /// myLink control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlAnchor myLink;
         
         /// <summary>
         /// contentBody control.

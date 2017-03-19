@@ -14,17 +14,19 @@ namespace VirusBusters
     {
         protected void Page_PreInit(object sender, EventArgs e)
         {
-            bool isLoggedIn = (System.Web.HttpContext.Current.User != null) && System.Web.HttpContext.Current.User.Identity.IsAuthenticated;
-            if (isLoggedIn)
+            switch (user.role)
             {
-                if (string.Equals(HttpContext.Current.User.Identity.Name, "admin", StringComparison.CurrentCultureIgnoreCase)) //to be changed to role
-                {
+                case "admin":
                     this.MasterPageFile = "~/admin.master";
-                }
-                else
-                {
+                    break;
+                case "mprof":
+                    this.MasterPageFile = "~/mprof.master";
+                    Response.Redirect("noaccess.html");
+                    break;
+                default:
                     this.MasterPageFile = "~/public.master";
-                }
+                    Response.Redirect("noaccess.html");
+                    break;
             }
         }
 

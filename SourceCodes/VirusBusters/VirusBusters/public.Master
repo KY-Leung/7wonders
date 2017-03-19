@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="public.Master.cs" Inherits="VirusBusters.Site2" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="public.Master.cs" Inherits="VirusBusters.Site3" %>
 
 <!DOCTYPE html>
 

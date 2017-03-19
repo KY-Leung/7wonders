@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace VirusBusters
 {
-    public partial class Site2 : System.Web.UI.MasterPage
+    public partial class Site3 : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -17,7 +17,7 @@ namespace VirusBusters
                 Label usernameLabel = LoginView1.FindControl("usernameLabel") as Label;
                 if (usernameLabel != null)
                 {
-                    usernameLabel.Text = "Welcome, " + HttpContext.Current.User.Identity.Name;
+                    usernameLabel.Text = "Welcome, " + user.Username;
                 }
             }
         }
