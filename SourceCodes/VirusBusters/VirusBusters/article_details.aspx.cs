@@ -23,13 +23,17 @@ namespace VirusBusters
             bool isLoggedIn = (System.Web.HttpContext.Current.User != null) && System.Web.HttpContext.Current.User.Identity.IsAuthenticated;
             if (isLoggedIn)
             {
-                if (string.Equals(HttpContext.Current.User.Identity.Name, "admin", StringComparison.CurrentCultureIgnoreCase)) //to be changed to role
+                switch (user.role)
                 {
-                    this.MasterPageFile = "~/admin.master";
-                }
-                else
-                {
-                    this.MasterPageFile = "~/public.master";
+                    case "admin":
+                        this.MasterPageFile = "~/admin.master";
+                        break;
+                    case "mprof":
+                        this.MasterPageFile = "~/mprof.master";
+                        break;
+                    default:
+                        this.MasterPageFile = "~/public.master";
+                        break;
                 }
             }
         }

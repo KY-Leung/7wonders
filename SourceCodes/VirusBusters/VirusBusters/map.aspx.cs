@@ -21,6 +21,26 @@ namespace VirusBusters
         protected String[] lngArray;
         protected String[] nameAr;
 
+        protected void Page_PreInit(object sender, EventArgs e)
+        {
+            bool isLoggedIn = (System.Web.HttpContext.Current.User != null) && System.Web.HttpContext.Current.User.Identity.IsAuthenticated;
+            if (isLoggedIn)
+            {
+                switch (user.role)
+                {
+                    case "admin":
+                        this.MasterPageFile = "~/admin.master";
+                        break;
+                    case "mprof":
+                        this.MasterPageFile = "~/mprof.master";
+                        break;
+                    default:
+                        this.MasterPageFile = "~/public.master";
+                        break;
+                }
+            }
+        }
+
         protected void Page_Load(object sender, EventArgs e)
         {
             SqlDataAdapter da = new SqlDataAdapter("Select * from clinic", ConfigurationManager.ConnectionStrings["myDB"].ConnectionString);
