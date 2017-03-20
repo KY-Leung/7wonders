@@ -103,7 +103,7 @@
                     lng: lngArray[i],
                     title: nameAr[i],
                     infoWindow: {
-                        content: '<p>' + nameAr[i] + '</p>'+ '<p>Operatime hours : 8AM–1PM, 2–4:30PM</p>' + '<form method="POST" action="appointment_new.aspx"> <input type="hidden" id="name" name="Name" value = "'+  nameAr[i] + '"> <input type="submit" value="Book Appointment" /></form>'
+                        content: '<p>' + nameAr[i] + '</p>'+ '<p>Operatime hours : 8AM–1PM, 2–4:30PM</p>' + '<form method="POST" action="appointment_new.aspx"> <input type="hidden" id="name" name="Name" value = "'+  nameAr[i] + '"> <div style="text-align:center"><input type="submit" value="Book Appointment" class="btn green"/></div></form>'
                     }
                 });
                     }
