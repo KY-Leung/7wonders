@@ -45,7 +45,7 @@ namespace VirusBusters
                 DropDownList1.SelectedValue = name;
             }
 
-            Label2.Text = "1"; // put user session ID here
+            Label2.Text = System.Web.HttpContext.Current.User.Identity.Name.ToString(); // put user session ID here
             string query = "SELECT MAX(Id) FROM appointment ";
             int rows = Convert.ToInt32(RunCommand(query)) + 1;
             Label1.Text = rows.ToString();
@@ -69,10 +69,25 @@ namespace VirusBusters
         protected void Button1_Click(object sender, EventArgs e)
         {
             Label3.Text = DateBox.Text;
-            SqlDataSource2.Insert();
-            Response.Redirect("appointment_manage.aspx");
+            int temp = checkdate();
+            if (temp > 0)
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('The selected timing is not avaliable. Please select another time slot.')", true);
+            }
+            else {
+
+                SqlDataSource2.Insert();
+                Response.Redirect("appointment_manage.aspx");
+            }
+        }
+
+        public int checkdate()
+        {
+            string line = "SELECT count(*) FROM appointment WHERE clinicName ='" + DropDownList1.SelectedValue.ToString() + "' AND date = '" + Label3.Text + "' AND time = '" + DropDownList2.SelectedValue.ToString() + "'" ;
+            int result = Convert.ToInt32(RunCommand(line));
+            return result;
         }
 
 
-    }
+        }
 }

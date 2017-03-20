@@ -14,9 +14,9 @@
     <form id="form1" runat="server">
         <div class="m-heading-1 border-green m-bordered">
             <h1>Manage Appointment</h1>
-            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" DataKeyNames="Id"  >
+            <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" DataKeyNames="Id" BackColor="White" BorderColor="#CCCCCC" BorderStyle="None" BorderWidth="1px" CellPadding="10" ForeColor="Black" GridLines="Horizontal"   Width="100%">
                 <Columns>
-                    <asp:BoundField DataField="Id" HeaderText="Appointment Id" SortExpression="Id" ReadOnly="True" />
+                    <asp:BoundField DataField="Id" HeaderText=" Id" SortExpression="Id" ReadOnly="True" />
                     <asp:BoundField DataField="clinicName" HeaderText="Clinic" SortExpression="clinicName" />
                     <asp:BoundField DataField="date" HeaderText="Date" SortExpression="date" />
                     <asp:BoundField DataField="time" HeaderText="Time" SortExpression="time" />
@@ -26,6 +26,14 @@
                         </ItemTemplate>
                     </asp:TemplateField>
                 </Columns>
+                <FooterStyle BackColor="#CCCC99" ForeColor="Black" />
+                <HeaderStyle BackColor="#333333" Font-Bold="True" ForeColor="White" />
+                <PagerStyle BackColor="White" ForeColor="Black" HorizontalAlign="Right" />
+                <SelectedRowStyle BackColor="#CC3333" Font-Bold="True" ForeColor="White" />
+                <SortedAscendingCellStyle BackColor="#F7F7F7" />
+                <SortedAscendingHeaderStyle BackColor="#4B4B4B" />
+                <SortedDescendingCellStyle BackColor="#E5E5E5" />
+                <SortedDescendingHeaderStyle BackColor="#242121" />
             </asp:GridView>
             <asp:Label ID="Label1" runat="server" Text="Label" Visible="False"></asp:Label>
             <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:VirusBustersDBConnectionString %>" DeleteCommand="DELETE FROM [appointment] WHERE [Id] = @Id" InsertCommand="INSERT INTO [appointment] ([Id], [clinicName], [date], [userID], [time]) VALUES (@Id, @clinicName, @date, @userID, @time)" SelectCommand="SELECT * FROM [appointment] WHERE ([userID] = @userID)" UpdateCommand="UPDATE [appointment] SET [clinicName] = @clinicName, [date] = @date, [userID] = @userID, [time] = @time WHERE [Id] = @Id">
