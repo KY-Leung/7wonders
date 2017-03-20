@@ -135,7 +135,6 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="appointment_history.aspx" />
     <Content Include="appointment_manage.aspx" />
     <Content Include="appointment_new.aspx" />
     <Content Include="ArticleDetailsValidate.aspx" />
@@ -175,13 +174,6 @@
     <Content Include="default.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="appointment_history.aspx.cs">
-      <DependentUpon>appointment_history.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="appointment_history.aspx.designer.cs">
-      <DependentUpon>appointment_history.aspx</DependentUpon>
-    </Compile>
     <Compile Include="appointment_manage.aspx.cs">
       <DependentUpon>appointment_manage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
