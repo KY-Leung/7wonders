@@ -16,15 +16,20 @@ namespace VirusBusters
         {
             get
             {
-                switch (Username.Substring(0, 5))
+                bool isLoggedIn = (System.Web.HttpContext.Current.User != null) && System.Web.HttpContext.Current.User.Identity.IsAuthenticated;
+                if (isLoggedIn)
                 {
-                    case "admin":
-                        return "admin";
-                    case "mprof":
-                        return "mprof";
-                    default:
-                        return "user";
+                    switch (Username.Substring(0, 5))
+                    {
+                        case "admin":
+                            return "admin";
+                        case "mprof":
+                            return "mprof";
+                        default:
+                            return "user";
+                    }
                 }
+                return "user";
             }
         }
     }
