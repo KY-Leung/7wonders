@@ -108,11 +108,11 @@
                         </div>
                         <!-- END SIDEBAR TOGGLER BUTTON -->
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a href="javascript:;" class="nav-link nav-toggle">
                             <i class="icon-call-end"></i>
                             <span class="title">Articles</span>
-                            <span class="arrow"></span>
+                            <span class="arrow open"></span>
                         </a>
                         <ul class="sub-menu">
                             <li class="nav-item">
@@ -138,11 +138,11 @@
                             <span class="title">Map</span>
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a href="javascript:;" class="nav-link nav-toggle">
                             <i class="icon-home"></i>
                             <span class="title">Appointment</span>
-                            <span class="arrow"></span>
+                            <span class="arrow open"></span>
                         </a>
                         <ul class="sub-menu">
                             <li class="nav-item">
@@ -155,18 +155,13 @@
                                     <span class="title">Manage</span>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a href="appointment_history.aspx" class="nav-link ">
-                                    <span class="title">History</span>
-                                </a>
-                            </li>
                         </ul>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item active">
                         <a href="javascript:;" class="nav-link nav-toggle">
                             <i class="icon-call-end"></i>
                             <span class="title">Symptom Checker</span>
-                            <span class="arrow"></span>
+                            <span class="arrow open"></span>
                         </a>
                         <ul class="sub-menu">
                             <li class="nav-item">

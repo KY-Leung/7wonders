@@ -12,8 +12,8 @@
             <div class="col-lg-9">
                 <div class="blog-single-content bordered blog-container">
                     <div class="blog-single-head">
+                        <h3 style="text-align: center;"><b><asp:Label ID="msglbl" runat="server" Text="" Visible="false" ForeColor="Green"></asp:Label></b></h3>
                         <h1 class="blog-single-head-title" id="ArticleTitle" runat="server"></h1>
-                        <asp:Label ID="msglbl" runat="server" Text="" Visible="false" ForeColor="Red"></asp:Label>
                         <div class="blog-single-head-date">
                             <i class="icon-calendar font-blue"></i>
                             <span id="ArticleDate" runat ="server"></span>
@@ -21,11 +21,14 @@
                     </div>
                     <div class="blog-single-img">
                         <asp:Image ID="ArticleImg" runat="server" />
-                        </div>
-                    <div class="blog-single-desc" id="ArticleDesc" runat="server">
-                        
                     </div>
-                    <asp:Button ID="Approve" runat="server" Text="Approve" OnClick="Approve_Click" />
+                    <div class="blog-single-desc" id="ArticleDesc" runat="server"></div>
+                </div>
+            </div>
+            <div class="col-lg-3">
+               <div class="m-heading-1 border-green m-bordered">
+                    <h3>Choose action:</h3>
+                    <asp:Button ID="Approve" runat="server" Text="Approve" cssclass="btn green" OnClick="Approve_Click" />
                 </div>
             </div>
         </div>
