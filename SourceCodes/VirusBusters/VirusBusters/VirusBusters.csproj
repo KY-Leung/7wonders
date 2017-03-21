@@ -159,6 +159,7 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="Scripts\custom.js" />
     <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
@@ -292,7 +293,6 @@
     </Compile>
     <Compile Include="symptom_checker_result.aspx.cs">
       <DependentUpon>symptom_checker_result.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="symptom_checker_result.aspx.designer.cs">
       <DependentUpon>symptom_checker_result.aspx</DependentUpon>

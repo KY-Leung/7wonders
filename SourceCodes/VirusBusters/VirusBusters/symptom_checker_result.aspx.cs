@@ -17,8 +17,15 @@ using System.Text;
 
 namespace VirusBusters
 {
+    public class sym
+    {
+        public string name;
+        public string percent;
+    }
+
     public partial class symptom_checker_result : System.Web.UI.Page
     {
+        private static sym[] req = new sym[4];
         protected void Page_PreInit(object sender, EventArgs e)
         {
             bool isLoggedIn = (System.Web.HttpContext.Current.User != null) && System.Web.HttpContext.Current.User.Identity.IsAuthenticated;
@@ -88,7 +95,7 @@ namespace VirusBusters
             return symptoms;
         }
 
-        public string[,]compareresult(string[,] symptomtable, string[] input, int rows)
+        public string[,] compareresult(string[,] symptomtable, string[] input, int rows)
         {
             string[,] result = new string[rows, 2];
             int score = 0;
@@ -110,21 +117,27 @@ namespace VirusBusters
             }
 
             StringBuilder resulttable = new StringBuilder();
-            resulttable.Append("<table  class=\"table table-striped table-bordered table-hover\" id=\"sample_2\">");
-
+          
             for(int i = 0; i<rows; i++)
             {
                 int rowscore = Int32.Parse(symptomtable[i, 5]);
                 float percentage = ((float)rowscore / (float)total) * 100;
-                resulttable.Append("<tr>");
-                resulttable.Append("<td>" + symptomtable[i, 4].ToString() + "</td>");
-                resulttable.Append("<td>" + percentage.ToString("0.00") + "%</td>");
-                resulttable.Append("</tr>");
+                
+                req[i] = new sym();
+                req[i].name = symptomtable[i, 4].ToString();
+                req[i].percent = percentage.ToString("0.00");
             }
-
-            resulttable.Append("</table>");
-            resulttableContainer.Controls.Add(new Literal { Text = resulttable.ToString() });
             return result;
         }
+
+        [System.Web.Services.WebMethod]
+        public static string displayResult()
+        {
+            System.Web.Script.Serialization.JavaScriptSerializer js = new System.Web.Script.Serialization.JavaScriptSerializer(); //system.web.extension assembly....
+           string test = js.Serialize(req);
+            return test;
+        }
     }
+
+   
 }
