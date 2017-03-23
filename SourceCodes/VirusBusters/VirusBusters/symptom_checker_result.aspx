@@ -7,7 +7,7 @@
     <!-- PAGE LEVEL PLUGINS-->
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="contentBody" runat="server">
-    
+
     <!-- CONTENT BODY-->
     <div class="m-heading-1 border-green m-bordered">
         <h3>Matches for Possible Conditions</h3>
@@ -22,7 +22,7 @@
             <div class="portlet light bordered">
                 <div class="portlet-title">
                     <div class="caption">
-                        <i class="icon-bar-chart font-green-haze"></i>
+                        <i class="fa fa-bars font-green-haze"></i>
                         <span class="caption-subject bold uppercase font-green-haze">Possible Conditions</span>
                     </div>
                     <div class="tools">
@@ -35,7 +35,6 @@
                 </div>
                 <div class="portlet-body">
                     <div id="container" style="min-width: 310px; height: 400px; max-width: 600px; margin: 0 auto"></div>
-                    <p>More information about the disease can be found  <a href="https://www.moh.gov.sg/content/moh_web/home/diseases_and_conditions/h/hfmd.html" target="_blank">HERE</a> </p>
                 </div>
                 <a href="symptom_checker.aspx" class="btn default button-previous">
                     <i class="fa fa-angle-left"></i>Back to Choose Symptom(s)
@@ -53,16 +52,15 @@
     <script src="../public/assets/global/plugins/amcharts/amcharts/serial.js" type="text/javascript"></script>
     <script src="../public/assets/global/plugins/amcharts/amcharts/pie.js" type="text/javascript"></script>
     <script src="../public/assets/global/plugins/amcharts/amcharts/themes/light.js" type="text/javascript"></script>--%>
-   
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="PageLevelScripts" runat="server">
     <!-- PAGE LEVEL SCRIPTS -->
     <!-- AMCHARTS-->
     <%-- <script src="../public/assets/pages/js/charts-amcharts.min.js" type="text/javascript"></script>--%>
-     <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="https://code.highcharts.com/highcharts.js"></script>
     <script src="https://code.highcharts.com/modules/exporting.js"></script>
     <script src="Scripts/custom.js" type="text/javascript"></script>
-    
+
 </asp:Content>
 <asp:Content ID="Content6" ContentPlaceHolderID="Others" runat="server">
     <!-- OTHERS-->

@@ -250,7 +250,7 @@
                                 </li>
                                 <li>
                                     <a href="app_calendar.html">
-                                        <i class="icon-calendar"></i> My Calendar </a>
+                                        <i class="fa fa-calendar"></i> My Calendar </a>
                                 </li>
                                 <li>
                                     <a href="app_inbox.html">
@@ -376,7 +376,7 @@
                         </li>
                         <li class="nav-item  ">
                             <a href="symptom_checker.aspx" class="nav-link nav-toggle">
-                                <i class="icon-calendar"></i>
+                                <i class="fa fa-calendar"> </i>
                                 <span class="title">Symptom Checker</span>
                             </a>
                         </li>

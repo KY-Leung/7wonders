@@ -3,12 +3,14 @@
 <!DOCTYPE html>
 
 <html lang="en">
-    <!--<![endif]-->
-    <!-- BEGIN HEAD -->
+<!--<![endif]-->
+<!-- BEGIN HEAD -->
 
 <head runat="server">
     <meta charset="utf-8" />
-    <title><asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder></title>
+    <title>
+        <asp:ContentPlaceHolder ID="title" runat="server"></asp:ContentPlaceHolder>
+    </title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <meta content="" name="description" />
@@ -32,8 +34,21 @@
     <link href="../public/assets/themes/css/themes/darkblue.min.css" rel="stylesheet" type="text/css" id="style_color" />
     <link href="../public/assets/themes/css/custom.min.css" rel="stylesheet" type="text/css" />
     <!-- END THEME LAYOUT STYLES -->
-    <link rel="shortcut icon" href="favicon.ico" />
-<!-- END HEAD -->
+    <!-- END HEAD -->
+    <style>
+        #login {
+            margin-right: -20px;
+            display: block;
+            background: #3D495A;
+            padding: 15px 30px;
+            color: #b4bcc8;
+        }
+
+        #login:hover {
+            text-decoration:none;
+            background: #364150;
+        }
+    </style>
 </head>
 <body class="page-header-fixed page-sidebar-closed-hide-logo page-container-bg-solid">
     <!-- BEGIN HEADER -->
@@ -43,7 +58,8 @@
             <!-- BEGIN LOGO -->
             <div class="page-logo">
                 <a href="index.html">
-                    <img src="../public/assets/themes/img/logo.png" alt="logo" class="logo-default" /> </a>
+                    <img src="../public/assets/themes/img/logo.png" alt="logo" class="logo-default" />
+                </a>
                 <div class="menu-toggler sidebar-toggler">
                     <span></span>
                 </div>
@@ -59,23 +75,25 @@
                 <ul class="nav navbar-nav pull-right">
                     <asp:LoginView ID="LoginView1" runat="server">
                         <AnonymousTemplate>
-                            <a href="login.aspx">Log In </a>
+                            <a href="login.aspx" id="login">Log In </a>
                         </AnonymousTemplate>
                         <LoggedInTemplate>
                             <li class="dropdown dropdown-user">
                                 <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                    <span class="username username-hide-on-mobile"> <asp:Label id="usernameLabel" runat="server" /> </span>
+                                    <span class="username username-hide-on-mobile">
+                                        <asp:Label ID="usernameLabel" runat="server" />
+                                    </span>
                                     <i class="fa fa-angle-down"></i>
                                 </a>
                                 <ul class="dropdown-menu dropdown-menu-default">
                                     <li>
                                         <a href="appointment_manage.aspx">
-                                            <i class="icon-user"></i> My Appointment </a>
+                                            <i class="fa fa-user"></i>My Appointment </a>
                                     </li>
-                                    <li class="divider"> </li>
+                                    <li class="divider"></li>
                                     <li>
                                         <a href="logout.aspx" runat="server" id="myLink">
-                                            <i class="icon-key"></i> Log Out </a>
+                                            <i class="fa fa-sign-out"></i>Log Out </a>
                                     </li>
                                 </ul>
                             </li>
@@ -90,7 +108,7 @@
     </div>
     <!-- END HEADER -->
     <!-- BEGIN HEADER & CONTENT DIVIDER -->
-    <div class="clearfix"> </div>
+    <div class="clearfix"></div>
     <!-- END HEADER & CONTENT DIVIDER -->
     <!-- BEGIN CONTAINER -->
     <div class="page-container">
@@ -118,26 +136,26 @@
                     </li>
                     <li class="nav-item">
                         <a href="articles.aspx" class="nav-link nav-toggle">
-                            <i class="icon-call-end"></i>
+                            <i class="fa fa-file-text"></i>
                             <span class="title">Articles</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a href="map.aspx" class="nav-link nav-toggle">
-                            <i class="icon-globe"></i>
+                            <i class="fa fa-globe"></i>
                             <span class="title">Map</span>
                         </a>
                     </li>
                     <li class="nav-item active">
                         <a href="javascript:;" class="nav-link nav-toggle">
-                            <i class="icon-home"></i>
+                            <i class="fa fa-book"></i>
                             <span class="title">Appointment</span>
                             <span class="arrow open"></span>
                         </a>
                         <ul class="sub-menu">
                             <li class="nav-item">
                                 <a href="appointment_new.aspx" class="nav-link ">
-                                    <span class="title"">New</span>
+                                    <span class="title">New</span>
                                 </a>
                             </li>
                             <li class="nav-item">
@@ -149,52 +167,52 @@
                     </li>
                     <li class="nav-item  ">
                         <a href="symptom_checker.aspx" class="nav-link nav-toggle">
-                            <i class="icon-calendar"></i>
+                            <i class="fa fa-medkit"></i>
                             <span class="title">Symptom Checker</span>
                         </a>
                     </li>
                 </ul>
                 <!-- END SIDEBAR MENU -->
-        </div>
-        <!-- END SIDEBAR -->
-        <!-- BEGIN CONTENT -->
-        <div class="page-content-wrapper">
-            <!-- BEGIN CONTENT BODY -->
-            <div class="page-content">
-                <asp:ContentPlaceHolder ID="contentBody" runat="server"></asp:ContentPlaceHolder>
             </div>
-            <!-- END CONTENT BODY -->
+            <!-- END SIDEBAR -->
+            <!-- BEGIN CONTENT -->
+            <div class="page-content-wrapper">
+                <!-- BEGIN CONTENT BODY -->
+                <div class="page-content">
+                    <asp:ContentPlaceHolder ID="contentBody" runat="server"></asp:ContentPlaceHolder>
+                </div>
+                <!-- END CONTENT BODY -->
+            </div>
+            <!-- END CONTENT -->
         </div>
-        <!-- END CONTENT -->
-    </div>
-    <!-- END CONTAINER -->
-    <!--[if lt IE 9]>
+        <!-- END CONTAINER -->
+        <!--[if lt IE 9]>
 <script src="../assets/global/plugins/respond.min.js"></script>
 <script src="../assets/global/plugins/excanvas.min.js"></script> 
 <![endif]-->
-    <!-- BEGIN CORE PLUGINS -->
-    <script src="../public/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
-    <script src="../public/assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
-    <script src="../public/assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
-    <script src="../public/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
-    <script src="../public/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
-    <script src="../public/assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
-    <script src="../public/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
-    <!-- END CORE PLUGINS -->
-    <!-- BEGIN PAGE LEVEL PLUGINS-->
-    <asp:ContentPlaceHolder ID="PageLevelPluginsScript" runat="server"></asp:ContentPlaceHolder>
-    <!-- END PAGE LEVEL PLUGINS -->
-    <!-- BEGIN THEME GLOBAL SCRIPTS -->
-    <script src="../public/assets/global/js/app.min.js" type="text/javascript"></script>
-    <!-- END THEME GLOBAL SCRIPTS -->
-    <!-- BEGIN PAGE LEVEL SCRIPTS-->
-    <asp:ContentPlaceHolder ID="PageLevelScripts" runat="server"></asp:ContentPlaceHolder>
-    <!-- END PAGE LEVEL SCRIPTS -->
-    <!-- BEGIN THEME LAYOUT SCRIPTS -->
-    <script src="../public/assets/themes/js/layout.min.js" type="text/javascript"></script>
-    <script src="../public/assets/themes/js/demo.min.js" type="text/javascript"></script>
-    <script src="../public/assets/themes/js/quick-sidebar.min.js" type="text/javascript"></script>
-    <!-- END THEME LAYOUT SCRIPTS -->
-    <asp:ContentPlaceHolder ID="Others" runat="server"></asp:ContentPlaceHolder>
+        <!-- BEGIN CORE PLUGINS -->
+        <script src="../public/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+        <script src="../public/assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+        <script src="../public/assets/global/plugins/js.cookie.min.js" type="text/javascript"></script>
+        <script src="../public/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+        <script src="../public/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+        <script src="../public/assets/global/plugins/jquery.blockui.min.js" type="text/javascript"></script>
+        <script src="../public/assets/global/plugins/bootstrap-switch/js/bootstrap-switch.min.js" type="text/javascript"></script>
+        <!-- END CORE PLUGINS -->
+        <!-- BEGIN PAGE LEVEL PLUGINS-->
+        <asp:ContentPlaceHolder ID="PageLevelPluginsScript" runat="server"></asp:ContentPlaceHolder>
+        <!-- END PAGE LEVEL PLUGINS -->
+        <!-- BEGIN THEME GLOBAL SCRIPTS -->
+        <script src="../public/assets/global/js/app.min.js" type="text/javascript"></script>
+        <!-- END THEME GLOBAL SCRIPTS -->
+        <!-- BEGIN PAGE LEVEL SCRIPTS-->
+        <asp:ContentPlaceHolder ID="PageLevelScripts" runat="server"></asp:ContentPlaceHolder>
+        <!-- END PAGE LEVEL SCRIPTS -->
+        <!-- BEGIN THEME LAYOUT SCRIPTS -->
+        <script src="../public/assets/themes/js/layout.min.js" type="text/javascript"></script>
+        <script src="../public/assets/themes/js/demo.min.js" type="text/javascript"></script>
+        <script src="../public/assets/themes/js/quick-sidebar.min.js" type="text/javascript"></script>
+        <!-- END THEME LAYOUT SCRIPTS -->
+        <asp:ContentPlaceHolder ID="Others" runat="server"></asp:ContentPlaceHolder>
 </body>
 </html>

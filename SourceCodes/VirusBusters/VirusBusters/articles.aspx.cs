@@ -62,7 +62,7 @@ namespace VirusBusters
                         articles.Append("<img src=\"../Article_Img/" + articledata.GetValue(3).ToString() + "\" width=\"400px\" height=\"200px\"/>");
                     articles.Append("<h2 class=\"blog-title blog-post-title\"> <a href=\"article_details.aspx?aid=" + articledata.GetValue(0).ToString() +"\" class=\"nav-link\">" + articledata.GetValue(5).ToString() + "</a></h2>");
                     articles.Append("<p class=\"blog-post-desc\">"+ data + "</p> ");
-                    articles.Append("<div class=\"blog-post-meta\"><i class=\"icon-calendar font-blue\"></i>" + articledata.GetValue(6).ToString() + "</div>");
+                    articles.Append("<div class=\"blog-post-meta\"><i class=\"fa fa-calendar font-blue\"></i> " + articledata.GetValue(6).ToString() + "</div>");
                     //articles.Append("<div class=\"blog-post-meta\"><i class=\"icon-bubble font-blue\"></i>14 Comments</div>");
                     articles.Append("</div></div></div>");
                 }

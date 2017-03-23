@@ -16,7 +16,7 @@
                     <div class="blog-single-head">
                         <h1 class="blog-single-head-title" id="ArticleTitle" runat="server"></h1>
                         <div class="blog-single-head-date">
-                            <i class="icon-calendar font-blue"></i>
+                            <i class="fa fa-calendar font-blue"></i>
                             <span id="ArticleDate" runat ="server"></span>
                         </div>
                     </div>

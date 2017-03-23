@@ -13,6 +13,7 @@ using System.Data.SqlClient;
 using System.Data.Entity.Validation;
 using System.Configuration;
 using System.Data;
+using System.Text;
 
 namespace VirusBusters
 {
@@ -46,34 +47,33 @@ namespace VirusBusters
 
                 using (SqlConnection con = new SqlConnection(connectionString))
                 {
-                    using (SqlCommand cmd = new SqlCommand("SELECT DISTINCT symptom FROM Symptoms"))
+                    
+                    StringBuilder comments = new StringBuilder();
+                    try
                     {
-                        cmd.CommandType = CommandType.Text;
-                        cmd.Connection = con;
                         con.Open();
-                        symptomsLB.DataSource = cmd.ExecuteReader();
-                        symptomsLB.DataTextField = "symptom";
-                        symptomsLB.DataBind();
-                        con.Close();
+                        SqlCommand cmd2 = new SqlCommand("SELECT DISTINCT symptom FROM Symptoms", con);
+                        SqlDataReader commentdata = cmd2.ExecuteReader();
+                        int i = 0;
+                        
+                        while (commentdata.Read())
+                        {
+                            comments.Append("<option value = '"+ commentdata.GetValue(0) + "' >"+commentdata.GetValue(0)+" </option>");
+                            i++;
+
+                        }
+                        SymContainer.Controls.Add(new Literal { Text = comments.ToString() });
+
                     }
+                    catch (SqlException ex)
+                    {
+
+                    }
+                    con.Close();
+
                 }
             }
            
-        }
-
-
-
-        protected void SubmitBtn_Click(object sender, EventArgs e)
-        {
-            int[] indexes = this.symptomsLB.GetSelectedIndices();
-            string[] symptoms = new string[4];
-
-            for (int i = 0; i < indexes.Length; i++)
-
-                    symptoms[i] = this.symptomsLB.Items[indexes[i]].Text;
-
-
-            Response.Redirect("symptom_checker_result.aspx?s1=" + symptoms[0] + "&s2=" + symptoms[1] + "&s3=" + symptoms[2] + "&s4=" + symptoms[3]);
         }
     }
 }

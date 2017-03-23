@@ -1,6 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="appointment_new.aspx.cs" Inherits="VirusBusters.appointment_new" MasterPageFile="~/admin.Master" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="server">
-    <!-- TITLE-->
     New Appointment
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="PageLevelPluginsLink" runat="server">
@@ -18,23 +17,13 @@
             <div class="portlet light bordered" id="form_wizard_1">
                 <div class="portlet-title">
                     <div class="caption">
-                        <i class=" icon-layers font-red"></i>
+                        <i class=" fa fa-edit font-red"></i>
                         <span class="caption-subject font-red bold uppercase">
                             Making Appointment -
                             <span class="step-title"> Step 1 of 1 </span>
                         </span>
                     </div>
-                    <div class="actions">
-                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
-                            <i class="icon-cloud-upload"></i>
-                        </a>
-                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
-                            <i class="icon-wrench"></i>
-                        </a>
-                        <a class="btn btn-circle btn-icon-only btn-default" href="javascript:;">
-                            <i class="icon-trash"></i>
-                        </a>
-                    </div>
+                    
                 </div>
                 <div class="portlet-body form"></div>
                 <div class="form-wizard">
